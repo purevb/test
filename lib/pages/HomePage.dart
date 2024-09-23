@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:oilgood_avaarai/pages/Instructions.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
         decoration: const BoxDecoration(
             image: DecorationImage(
           image: AssetImage(
-            "assets/images/homepage.png",
+            "assets/images/home/homepage.png",
           ),
           fit: BoxFit.fill,
         )),
@@ -32,15 +32,15 @@ class HomePage extends StatelessWidget {
                   onTap: () => Get.back(),
                   child: Container(
                     padding: const EdgeInsets.only(top: 30),
-                    child: Image.asset("assets/images/back.png"),
+                    child: Image.asset("assets/images/home/back.png"),
                   ),
                 ),
-                Image.asset("assets/images/avaarai.png"),
+                Image.asset("assets/images/home/avaarai.png"),
                 GestureDetector(
-                  onTap: () => print("zaavar"),
+                  onTap: () => Get.to(() => const InstructionsPage()),
                   child: Container(
                     padding: const EdgeInsets.only(top: 30),
-                    child: Image.asset("assets/images/question.png"),
+                    child: Image.asset("assets/images/home/question.png"),
                   ),
                 ),
               ],
@@ -50,7 +50,7 @@ class HomePage extends StatelessWidget {
             ),
             SizedBox(
               width: width * 0.75,
-              child: Image.asset("assets/images/iphone.png"),
+              child: Image.asset("assets/images/home/iphone.png"),
             ),
             SizedBox(
               height: height * 0.03,
@@ -58,7 +58,7 @@ class HomePage extends StatelessWidget {
             Align(
               alignment: Alignment.centerRight,
               child: Container(
-                height: height * 0.31,
+                height: height * 0.32,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -73,7 +73,9 @@ class HomePage extends StatelessWidget {
                           )
                         ]),
                         child: Image.asset(
-                          "assets/images/delguur.png",
+                          "assets/images/home/delguur.png",
+                          width: width * 0.19,
+                          height: width * 0.19,
                         ),
                       ),
                     ),
@@ -88,7 +90,9 @@ class HomePage extends StatelessWidget {
                           )
                         ]),
                         child: Image.asset(
-                          "assets/images/brand.png",
+                          "assets/images/home/brand.png",
+                          width: width * 0.19,
+                          height: width * 0.19,
                         ),
                       ),
                     ),
@@ -103,7 +107,9 @@ class HomePage extends StatelessWidget {
                           )
                         ]),
                         child: Image.asset(
-                          "assets/images/beleg.png",
+                          "assets/images/home/beleg.png",
+                          width: width * 0.19,
+                          height: width * 0.19,
                         ),
                       ),
                     ),
@@ -117,7 +123,7 @@ class HomePage extends StatelessWidget {
             GestureDetector(
               onTap: () => print("Togloh"),
               child: Image.asset(
-                "assets/images/togloh.png",
+                "assets/images/home/togloh.png",
                 width: width * 0.6,
                 height: height * 0.1,
               ),
