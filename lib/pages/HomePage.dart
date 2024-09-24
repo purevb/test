@@ -70,7 +70,7 @@ class HomePage extends StatelessWidget {
             Align(
               alignment: Alignment.centerRight,
               child: Container(
-                height: height * 0.39,
+                height: height * 0.33,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -85,7 +85,7 @@ class HomePage extends StatelessWidget {
                           )
                         ]),
                         child: Stack(
-                          alignment: Alignment(0, 1),
+                          alignment:const Alignment(0, 0.8),
                           children: [
                             Expanded(
                               child: Image.asset(
@@ -121,7 +121,7 @@ class HomePage extends StatelessWidget {
                           )
                         ]),
                         child: Stack(
-                          alignment: Alignment(0, 0.8),
+                          alignment: const Alignment(0, 0.8),
                           children: [
                             Image.asset(
                               "assets/images/home/brand.png",
@@ -150,7 +150,7 @@ class HomePage extends StatelessWidget {
                           )
                         ]),
                         child: Stack(
-                          alignment: Alignment(0, 0.8),
+                          alignment: const Alignment(0, 0.65),
                           children: [
                             Image.asset(
                               "assets/images/home/beleg.png",
@@ -216,10 +216,10 @@ class HomePage extends StatelessWidget {
                   )
                 ],
               ),
-            )
+            ),
           ],
         ),
-      )),
+      ),),
     );
   }
 }

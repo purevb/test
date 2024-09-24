@@ -25,7 +25,7 @@ class MyButton extends StatelessWidget {
           image: AssetImage(paths),
         )),
         child: Align(
-          alignment: Alignment(0, -1),
+          alignment: const Alignment(0, -0.5),
           child: Text(
             text,
             style: const TextStyle(
