@@ -44,7 +44,7 @@ class LoadingScreen extends StatelessWidget {
                           ),
                           BoxShadow(
                             color: Color(0xfffff1de),
-                            spreadRadius: -0.0,
+                            spreadRadius: -12.0,
                             blurRadius: 20.0,
                           )
                         ],

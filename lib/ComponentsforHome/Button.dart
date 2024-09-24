@@ -19,7 +19,7 @@ class MyButton extends StatelessWidget {
     return GestureDetector(
       onTap: () => print("${text}"),
       child: Container(
-        height: height * 0.09,
+        height: height * 0.1,
         decoration: BoxDecoration(
             image: DecorationImage(
           image: AssetImage(paths),
