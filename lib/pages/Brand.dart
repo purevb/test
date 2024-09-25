@@ -24,16 +24,12 @@ class BrandPage extends StatelessWidget {
                   vertical: height * 0.03, horizontal: width * 0.055),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
-                border: Border.all(
-                    color: const Color.fromARGB(255, 245, 185, 6), width: 3),
-                boxShadow: const [
+                color: const Color(0xfffff1de),
+                boxShadow: [
                   BoxShadow(
-                    color: Color(0xffFBD050),
-                  ),
-                  BoxShadow(
-                    color: Color(0xfffff1de),
-                    spreadRadius: -6,
-                    blurRadius: 10.0,
+                    color: Colors.black.withOpacity(0.3),
+                    spreadRadius: 0,
+                    blurRadius: 5.0,
                   )
                 ],
               ),
@@ -43,12 +39,13 @@ class BrandPage extends StatelessWidget {
                   padding: EdgeInsets.only(
                       top: height * 0.05,
                       left: width * 0.05,
-                      right: width * 0.05),
+                      right: width * 0.05,
+                      bottom: height * 0.02),
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    mainAxisSpacing: 20,
-                    crossAxisSpacing: 20,
+                    mainAxisSpacing: 10,
+                    crossAxisSpacing: 10,
                     crossAxisCount: 2,
-                    // childAspectRatio: 4 / 3,
+                    childAspectRatio: 3.25 / 3,
                     // mainAxisExtent: 180
                   ),
                   itemCount: 10,

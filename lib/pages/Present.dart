@@ -57,7 +57,7 @@ class _PresentPageState extends State<PresentPage> {
                                 child: const Text(
                                     "Тоглоомоо тоглоод бэлгээ аваарай",
                                     style: TextStyle(
-                                        fontFamily: "ComicSansMS",
+                                        fontFamily: "ComicRegular",
                                         fontWeight: FontWeight.bold,
                                         fontSize: 14)),
                               ),
@@ -205,7 +205,7 @@ class _PresentPageState extends State<PresentPage> {
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 20,
-                              fontFamily: "ComicSansMS",
+                              fontFamily: "ComicRegular",
                               fontWeight: FontWeight.bold,
                             ),
                           ),

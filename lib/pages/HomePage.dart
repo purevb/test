@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:oilgood_avaarai/ComponentsforHome/Button.dart';
 import 'package:oilgood_avaarai/pages/Brand.dart';
 import 'package:oilgood_avaarai/pages/Instructions.dart';
@@ -73,7 +75,164 @@ class HomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       GestureDetector(
-                        onTap: () => print("delguur"),
+                        onTap: () => showMaterialModalBottomSheet(
+                          context: context,
+                          builder: (context) => Container(
+                            height: height * 0.6,
+                            width: width,
+                            child: Stack(
+                              alignment: Alignment.center,
+                              children: [
+                                Column(
+                                  children: [
+                                    Container(
+                                      width: width,
+                                      height: height * 0.1,
+                                      color: Colors.transparent,
+                                    ),
+                                    SizedBox(
+                                        height: height * 0.5,
+                                        width: width,
+                                        child: Column(
+                                          children: [
+                                            Container(
+                                              height: height * 0.015,
+                                              width: width,
+                                              decoration: const BoxDecoration(
+                                                gradient: LinearGradient(
+                                                  begin: Alignment.topCenter,
+                                                  end: Alignment.bottomCenter,
+                                                  colors: [
+                                                    Color(0xff78A0CF),
+                                                    Color(0xff2351A1),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                            Container(
+                                              padding: EdgeInsets.only(
+                                                  top: height * 0.035,
+                                                  left: width * 0.05,
+                                                  right: width * 0.05,
+                                                  bottom: height * 0.03),
+                                              height: height * 0.485,
+                                              width: width,
+                                              decoration: const BoxDecoration(
+                                                gradient: LinearGradient(
+                                                  begin: Alignment.topCenter,
+                                                  end: Alignment.bottomCenter,
+                                                  colors: [
+                                                    Color(0xffFBD050),
+                                                    Color(0xffFBAD50),
+                                                  ],
+                                                ),
+                                              ),
+                                              child: Column(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
+                                                children: [
+                                                  Container(
+                                                    height: height * 0.22,
+                                                    decoration: BoxDecoration(
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color: Colors.black
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            spreadRadius: 0,
+                                                            blurRadius: 5.0,
+                                                          )
+                                                        ],
+                                                        color: const Color(
+                                                            0xfffff1de),
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(31)),
+                                                    child: GridView.builder(
+                                                        physics:
+                                                            const NeverScrollableScrollPhysics(),
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .only(
+                                                                top: 25,
+                                                                right: 45,left: 45,
+                                                                bottom: 20),
+                                                        gridDelegate:
+                                                            const SliverGridDelegateWithFixedCrossAxisCount(
+                                                          mainAxisSpacing: 10,
+                                                          crossAxisSpacing: 30,
+                                                          crossAxisCount: 3,
+                                                          mainAxisExtent: 80,
+                                                          childAspectRatio: 1/1
+                                                        ),
+                                                        itemCount: 6,
+                                                        itemBuilder:
+                                                            (BuildContext
+                                                                    context,
+                                                                int index) {
+                                                          return Container(
+                                                            color: Colors.amber,
+                                                          );
+                                                        }),
+                                                  ),
+                                                  Container(
+                                                    height: height * 0.18,
+                                                    decoration: BoxDecoration(
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color: Colors.black
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            spreadRadius: 0,
+                                                            blurRadius: 5.0,
+                                                          )
+                                                        ],
+                                                        color: const Color(
+                                                            0xfffff1de),
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(31)),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ],
+                                        )),
+                                  ],
+                                ),
+                                Positioned(
+                                  top: height * 0.051,
+                                  child: Container(
+                                    decoration: const BoxDecoration(boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.white,
+                                        spreadRadius: -6.0,
+                                        blurRadius: 20.0,
+                                      )
+                                    ]),
+                                    child: Stack(
+                                      alignment: const Alignment(0, 0.7),
+                                      children: [
+                                        Image.asset(
+                                          "assets/images/home/delguur.png",
+                                          width: width * 0.25,
+                                          height: width * 0.25,
+                                        ),
+                                        Text(
+                                          "Дэлгүүр",
+                                          style: GoogleFonts.comicNeue(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 12),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                         child: Container(
                           decoration: const BoxDecoration(boxShadow: [
                             BoxShadow(
@@ -90,12 +249,10 @@ class HomePage extends StatelessWidget {
                                 width: width * 0.19,
                                 height: width * 0.19,
                               ),
-                              const Text(
+                              Text(
                                 "Дэлгүүр",
-                                style: TextStyle(
-                                    fontFamily: "ComicSansMS",
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 12),
+                                style: GoogleFonts.comicNeue(
+                                    fontWeight: FontWeight.bold, fontSize: 12),
                               ),
                             ],
                           ),
