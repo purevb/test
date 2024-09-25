@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:oilgood_avaarai/ComponentsforInstructions/forImage.dart';
 import 'package:oilgood_avaarai/ComponentsforInstructions/forText.dart';
 import 'package:get/get.dart';
 
@@ -21,6 +20,8 @@ class InstructionsPage extends StatelessWidget {
               Stack(
                 children: [
                   Container(
+                    width: width,
+                    height: height * 0.6,
                     decoration: BoxDecoration(
                         color: const Color(0xfffff1de),
                         borderRadius: BorderRadius.circular(16)),
@@ -32,31 +33,23 @@ class InstructionsPage extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: width * 0.05),
                     child: Column(
                       children: [
-                        Padding(
-                          padding: EdgeInsets.only(top: height * 0.03),
-                          child: const ForText(
-                              text:
-                                  "1.Тоглох товчийг дарж тоглоом руу орсноор тоглоом эхэлнэ."),
-                        ),
-                        const ForImage(
-                            path: "assets/images/zaavar/zaavar1.png"),
-                        const ForText(
-                            text:
-                                "2.Эрхээ ашиглан бөмбөг буулгах замыг сонгоорой."),
-                        const ForImage(
-                            path: "assets/images/zaavar/placeholder.png"),
-                        const ForText(
-                            text:
-                                "3. Зам дагуу буулган доорх бэлэsгт хүргэн урамшуулал аваарай."),
-                        const ForImage(
-                            path: "assets/images/zaavar/placeholder.png"),
-                        const ForText(
-                            text: "4. Тоглоом тоглосны дараа бэлэг аваарай."),
-                        const ForImage(
-                            path: "assets/images/zaavar/placeholder.png"),
-                        const ForText(
-                            text:
-                                "5. Тоглоомоос гарч ирэх үсгүүдийг бүрэн цуглуулан iPhone 16 гэсэн үг бүтээж Супер бэлэг авах боломжтой."),
+                        ListView.builder(
+                            shrinkWrap: true,
+                            itemBuilder: (BuildContext context, int index) {
+                              return const ForText(
+                                  path:
+                                      "https://t4.ftcdn.net/jpg/02/98/36/33/240_F_298363329_or4WmbHHNa6mLHKgg5olz5AyaOaCThV7.jpg",
+                                  text: "a");
+                            })
+                        // Padding(
+                        //   padding: EdgeInsets.only(top: height * 0.03),
+                        //   child: const ForText(
+                        //     text:
+                        //         "1.Тоглох товчийг дарж тоглоом руу орсноор тоглоом эхэлнэ.",
+                        //     path:
+                        //         'https://t4.ftcdn.net/jpg/02/98/36/33/240_F_298363329_or4WmbHHNa6mLHKgg5olz5AyaOaCThV7.jpg',
+                        //   ),
+                        // ),
                       ],
                     ),
                   ),
@@ -117,22 +110,6 @@ class InstructionsPage extends StatelessWidget {
                           color: Color(0xff4b519d),
                           fontSize: 24),
                     ),
-                    ForText(
-                        text:
-                            "1.Өөрт ойрхон Номин сүлжээ дэлгүүрээс “Бүтээгдэхүүн” цэсэд байрших бүтээгдэхүүн худалдан авч тоглоомын эрхтэй болох боломжтой.​"),
-                    ForImage(path: "assets/images/zaavar/placeholder.png"),
-                    ForText(
-                        text:
-                            "2. “Бүтээгдэхүүн” цэсэд байрших бүтээгдэхүүн бүрээс тоглоомын эрх үүснэ.​"),
-                    ForImage(path: "assets/images/zaavar/placeholder.png"),
-                    ForText(
-                        text:
-                            "3. Та Дэлгүүр хэсэг рүү орон өөрт тохирох эрхийн тоог сонгон худалдан авах боломжтой.​"),
-                    ForImage(path: "assets/images/zaavar/placeholder.png"),
-                    ForText(
-                        text:
-                            "4. Бүтээгдэхүүн цэсэд байрлах Брэнд болон бүтээгдэхүүний жагсаалтыг бүрэн үзэж тоглоомын эрхтэй болох боломжтой.​"),
-                    ForImage(path: "assets/images/zaavar/placeholder.png"),
                   ],
                 ),
               )

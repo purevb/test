@@ -38,6 +38,7 @@ dependencies:
   get: ^4.6.6
   card_swiper: ^3.0.1
   carousel_slider: ^5.0.0
+  lottie: ^3.1.2
 
 dev_dependencies:
   flutter_test:
@@ -67,6 +68,10 @@ flutter:
     - assets/images/zaavar/
     - assets/images/brand/
     - assets/images/beleg/
+    - assets/animations/
+    - assets/animations/zam/
+
+
 
 
 
@@ -88,6 +93,8 @@ flutter:
     - family: ComicSansMS
       fonts:
         - asset: assets/fonts/ComicSansMS.ttf
+        # - asset: assets/fonts/ComicSansMS3.ttf
+
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

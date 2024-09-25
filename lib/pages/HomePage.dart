@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                width: width * 0.6,
+                width: width * 0.7,
                 child: Image.asset("assets/images/home/iphone.png"),
               ),
               Align(
