@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:oilgood_avaarai/Components/ComponentsforBonus/Items.dart';
+import 'package:oilgood_avaarai/Components/ComponentsforTransaction/tile.dart';
 
-class BonusHistory extends StatelessWidget {
-  const BonusHistory({super.key});
+class TransactionHistory extends StatelessWidget {
+  const TransactionHistory({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -45,12 +46,31 @@ class BonusHistory extends StatelessWidget {
                   ),
                   child: ListView.builder(
                       itemBuilder: (BuildContext context, int index) {
-                        return const MyItems(
-                            path:
-                                "https://t3.ftcdn.net/jpg/02/28/05/32/240_F_228053219_FNSAPKd8PrTU1DDk0vBddhHix38sjYpo.jpg",
-                            title: "Goku",
-                            subTitle: "Son",
-                            date: "2016.15.15");
+                        return Column(
+                          children: [
+                            const MyTile(
+                                path:
+                                    "https://t3.ftcdn.net/jpg/02/28/05/32/240_F_228053219_FNSAPKd8PrTU1DDk0vBddhHix38sjYpo.jpg",
+                                title: "Goku",
+                                subTitle: "Son",
+                                date: "2016.15.15"),
+                            Flex(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              direction: Axis.horizontal,
+                              children: List.generate(
+                                  30,
+                                  (index) => const SizedBox(
+                                        width: 6,
+                                        height: 1.5,
+                                        child: DecoratedBox(
+                                          decoration: BoxDecoration(
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                      )),
+                            )
+                          ],
+                        );
                       },
                       itemCount: 10),
                 ),
@@ -89,7 +109,7 @@ class BonusHistory extends StatelessWidget {
                         ),
                         child: const Center(
                           child: Text(
-                            "Урамшууллын түүх",
+                            "Гүйлгээний түүх",
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 20,

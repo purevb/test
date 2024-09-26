@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:oilgood_avaarai/ComponentsforInstructions/forText.dart';
+import 'package:oilgood_avaarai/Components/ComponentsforInstructions/forText.dart';
 
 class InstructionsPage extends StatelessWidget {
   const InstructionsPage({super.key});
@@ -19,7 +19,7 @@ class InstructionsPage extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
-            padding: EdgeInsets.only(bottom: height*0.05),
+            padding: EdgeInsets.only(bottom: height * 0.05),
             color: const Color(0xfffbd050),
             child: Column(
               children: [
@@ -29,7 +29,7 @@ class InstructionsPage extends StatelessWidget {
                       margin: EdgeInsets.symmetric(
                           vertical: height * 0.026, horizontal: width * 0.05),
                       width: width,
-                      height: height*0.6,
+                      height: height * 0.6,
                       decoration: BoxDecoration(
                           color: const Color(0xfffff1de),
                           borderRadius: BorderRadius.circular(18),
@@ -77,11 +77,11 @@ class InstructionsPage extends StatelessWidget {
                         top: height * 0.01,
                         left: width * 0.38,
                         child: const Text(
-                          "Заавар",
+                          "Зaaвaр",
                           style: TextStyle(
                             fontSize: 28,
                             color: Colors.white,
-                            fontFamily: 'ComicSansMS',
+                            fontFamily: 'ComicSansMSS',
                             shadows: [
                               Shadow(
                                 color: Color(0xff4b509d),
@@ -116,7 +116,7 @@ class InstructionsPage extends StatelessWidget {
                   child: Column(
                     children: [
                       const Text(
-                        "-Эрх авах заавар-",
+                        "-Эрх aвaх зaaвaр-",
                         style: TextStyle(
                             fontFamily: "ComicSansMS",
                             color: Color(0xff4b519d),

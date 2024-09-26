@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:oilgood_avaarai/ComponentsforBrand/RightSide.dart';
-import 'package:oilgood_avaarai/ComponentsforBrand/dialog.dart';
+import 'package:oilgood_avaarai/Components/ComponentsforBrand/RightSide.dart';
+import 'package:oilgood_avaarai/Components/ComponentsforBrand/dialog.dart';
 
 class BrandPage extends StatelessWidget {
   const BrandPage({super.key});

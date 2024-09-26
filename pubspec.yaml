@@ -72,11 +72,7 @@ flutter:
     - assets/images/beleg/
     - assets/animations/
     - assets/animations/zam/
-
-
-
-
-
+    - assets/images/home/bottomsheet/
 
   #   - images/a_dot_ham.jpeg
 
@@ -94,15 +90,21 @@ flutter:
   fonts:
     - family: ComicSansMS
       fonts:
-        - asset: assets/fonts/ComicSansMS.ttf
-    
+        - asset: assets/fonts/comicsans/COMIC.TTF
+        - asset: assets/fonts/comicsans/comici.ttf
+        - asset: assets/fonts/comicsans/ComicSansMS3.ttf
+        - asset: assets/fonts/comicsans/ComicSansMS.ttf
+        - asset: assets/fonts/comicsans/comicz.ttf
+        - asset: assets/fonts/comicsans/design.graffiti.comicsansms.ttf
+        - asset: assets/fonts/comicsans/design.graffiti.comicsansmsgras.ttf
+
         # - asset: assets/fonts/ComicSansMS3.ttf
 
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-    - family: ComicSansMS
-      fonts:
-        - asset: assets/fonts/ComicSansMS.ttf
+    #       - asset: fonts/Schyler-Italic.ttf
+    #         style: italic
+    # - family: ComicSansMS
+    #   fonts:
+    #     - asset: assets/fonts/ComicSansMS.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

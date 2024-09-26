@@ -1,12 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
-import 'package:oilgood_avaarai/ComponentsforHome/Button.dart';
+import 'package:oilgood_avaarai/Components/ComponentsforHome/Button.dart';
+import 'package:oilgood_avaarai/Components/ComponentsforShop/xButton.dart';
 import 'package:oilgood_avaarai/pages/Brand.dart';
 import 'package:oilgood_avaarai/pages/Instructions.dart';
 import 'package:oilgood_avaarai/pages/Present.dart';
+import 'package:oilgood_avaarai/pages/TransactionHistory.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -76,6 +79,7 @@ class HomePage extends StatelessWidget {
                     children: [
                       GestureDetector(
                         onTap: () => showMaterialModalBottomSheet(
+                          backgroundColor: Colors.transparent,
                           context: context,
                           builder: (context) => Container(
                             height: height * 0.6,
@@ -156,27 +160,39 @@ class HomePage extends StatelessWidget {
                                                             const EdgeInsets
                                                                 .only(
                                                                 top: 25,
-                                                                right: 45,left: 45,
+                                                                right: 45,
+                                                                left: 45,
                                                                 bottom: 20),
                                                         gridDelegate:
                                                             const SliverGridDelegateWithFixedCrossAxisCount(
-                                                          mainAxisSpacing: 10,
-                                                          crossAxisSpacing: 30,
-                                                          crossAxisCount: 3,
-                                                          mainAxisExtent: 80,
-                                                          childAspectRatio: 1/1
-                                                        ),
+                                                                mainAxisSpacing:
+                                                                    10,
+                                                                crossAxisSpacing:
+                                                                    30,
+                                                                crossAxisCount:
+                                                                    3,
+                                                                mainAxisExtent:
+                                                                    80,
+                                                                childAspectRatio:
+                                                                    1 / 1),
                                                         itemCount: 6,
                                                         itemBuilder:
                                                             (BuildContext
                                                                     context,
                                                                 int index) {
-                                                          return Container(
-                                                            color: Colors.amber,
+                                                          return const Xbutton(
+                                                            multiple: '1x',
+                                                            price: '300₮',
                                                           );
                                                         }),
                                                   ),
                                                   Container(
+                                                    padding:
+                                                        EdgeInsets.symmetric(
+                                                            horizontal:
+                                                                width * 0.06,
+                                                            vertical:
+                                                                height * 0.02),
                                                     height: height * 0.18,
                                                     decoration: BoxDecoration(
                                                         boxShadow: [
@@ -193,6 +209,131 @@ class HomePage extends StatelessWidget {
                                                         borderRadius:
                                                             BorderRadius
                                                                 .circular(31)),
+                                                    child: Column(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .spaceBetween,
+                                                      children: [
+                                                        Row(
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .spaceBetween,
+                                                          children: [
+                                                            GestureDetector(
+                                                              onTap: () =>
+                                                                  print(
+                                                                      "minus"),
+                                                              child: Container(
+                                                                width: width *
+                                                                    0.12,
+                                                                height: width *
+                                                                    0.12,
+                                                                child:
+                                                                    Image.asset(
+                                                                  "assets/images/home/bottomsheet/hasah.png",
+                                                                  fit: BoxFit
+                                                                      .fill,
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            Container(
+                                                              width:
+                                                                  width * 0.45,
+                                                              height:
+                                                                  height * 0.07,
+                                                              child:
+                                                                  Image.asset(
+                                                                "assets/images/home/bottomsheet/multiple.png",
+                                                                fit:
+                                                                    BoxFit.fill,
+                                                              ),
+                                                            ),
+                                                            GestureDetector(
+                                                              onTap: () =>
+                                                                  print("add"),
+                                                              child: Container(
+                                                                width: width *
+                                                                    0.12,
+                                                                height: width *
+                                                                    0.12,
+                                                                child:
+                                                                    Image.asset(
+                                                                  "assets/images/home/bottomsheet/nemh.png",
+                                                                  fit: BoxFit
+                                                                      .fill,
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                        Row(
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .spaceBetween,
+                                                          children: [
+                                                            GestureDetector(
+                                                              onTap: () => Get.to(
+                                                                  const TransactionHistory()),
+                                                              child: Container(
+                                                                width: width *
+                                                                    0.13,
+                                                                height: width *
+                                                                    0.13,
+                                                                child:
+                                                                    Image.asset(
+                                                                  "assets/images/beleg/time.png",
+                                                                  fit: BoxFit
+                                                                      .fill,
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            GestureDetector(
+                                                              onTap: () =>
+                                                                  print("buyb"),
+                                                              child: Container(
+                                                                width:
+                                                                    width * 0.6,
+                                                                height: height *
+                                                                    0.06,
+                                                                decoration: const BoxDecoration(
+                                                                    image: DecorationImage(
+                                                                        fit: BoxFit
+                                                                            .fill,
+                                                                        image: AssetImage(
+                                                                            "assets/images/home/bottomsheet/buy.png"))),
+                                                                child:
+                                                                    const Align(
+                                                                  alignment:
+                                                                      Alignment(
+                                                                          0,
+                                                                          -0.2),
+                                                                  child: Text(
+                                                                    "Худалдаж авах",
+                                                                    style: TextStyle(
+                                                                        fontFamily:
+                                                                            "ComicSansMSS",
+                                                                        color: Colors
+                                                                            .white,
+                                                                        fontSize:
+                                                                            25,
+                                                                        shadows: [
+                                                                          Shadow(
+                                                                            color:
+                                                                                Color(0xff4b509d),
+                                                                            blurRadius:
+                                                                                2.0,
+                                                                            offset:
+                                                                                Offset(3.0, 3.0),
+                                                                          ),
+                                                                        ]),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        )
+                                                      ],
+                                                    ),
                                                   ),
                                                 ],
                                               ),
@@ -212,16 +353,17 @@ class HomePage extends StatelessWidget {
                                       )
                                     ]),
                                     child: Stack(
-                                      alignment: const Alignment(0, 0.7),
+                                      alignment: const Alignment(0, 0.6),
                                       children: [
                                         Image.asset(
-                                          "assets/images/home/delguur.png",
+                                          "assets/images/home/bottomsheet/shooop.png",
                                           width: width * 0.25,
                                           height: width * 0.25,
                                         ),
-                                        Text(
+                                        const Text(
                                           "Дэлгүүр",
-                                          style: GoogleFonts.comicNeue(
+                                          style: TextStyle(
+                                              fontFamily: "ComicSansMSS",
                                               fontWeight: FontWeight.bold,
                                               fontSize: 12),
                                         ),
@@ -242,17 +384,19 @@ class HomePage extends StatelessWidget {
                             )
                           ]),
                           child: Stack(
-                            alignment: const Alignment(0, 0.8),
+                            alignment: const Alignment(0, 0.75),
                             children: [
                               Image.asset(
                                 "assets/images/home/delguur.png",
                                 width: width * 0.19,
                                 height: width * 0.19,
                               ),
-                              Text(
+                              const Text(
                                 "Дэлгүүр",
-                                style: GoogleFonts.comicNeue(
-                                    fontWeight: FontWeight.bold, fontSize: 12),
+                                style: TextStyle(
+                                    fontFamily: "ComicSansMSS",
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 12),
                               ),
                             ],
                           ),
@@ -274,7 +418,7 @@ class HomePage extends StatelessWidget {
                             )
                           ]),
                           child: Stack(
-                            alignment: const Alignment(0, 0.8),
+                            alignment: const Alignment(0, 0.75),
                             children: [
                               Image.asset(
                                 "assets/images/home/brand.png",

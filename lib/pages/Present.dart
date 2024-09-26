@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:oilgood_avaarai/ComponentsforPresent/Jack.dart';
-import 'package:oilgood_avaarai/ComponentsforPresent/ToggleButton.dart';
+import 'package:oilgood_avaarai/Components/ComponentsforPresent/Jack.dart';
+import 'package:oilgood_avaarai/Components/ComponentsforPresent/ToggleButton.dart';
 import 'package:oilgood_avaarai/pages/BonusHistory.dart';
 
 class PresentPage extends StatefulWidget {
@@ -57,7 +57,7 @@ class _PresentPageState extends State<PresentPage> {
                                 child: const Text(
                                     "Тоглоомоо тоглоод бэлгээ аваарай",
                                     style: TextStyle(
-                                        fontFamily: "ComicRegular",
+                                        fontFamily: "ComicSansMSS",
                                         fontWeight: FontWeight.bold,
                                         fontSize: 14)),
                               ),
@@ -205,7 +205,7 @@ class _PresentPageState extends State<PresentPage> {
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 20,
-                              fontFamily: "ComicRegular",
+                              fontFamily: "ComicSansMSS",
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -222,7 +222,7 @@ class _PresentPageState extends State<PresentPage> {
                   ),
                 ),
                 Positioned(
-                  top: height * 0.105,
+                  top: height * 0.08,
                   left: width * 0.03,
                   child: GestureDetector(
                     onTap: () => setState(() {
@@ -237,7 +237,7 @@ class _PresentPageState extends State<PresentPage> {
                   ),
                 ),
                 Positioned(
-                  top: height * 0.104,
+                  top: height * 0.08,
                   right: width * 0.03,
                   child: GestureDetector(
                       onTap: () => setState(() {
