@@ -10,10 +10,14 @@ class InstructionsPage extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
 
-    int itemCount = 10;
-    double itemHeight = height * 0.05;
-
-    double totalListViewHeight = itemCount * itemHeight;
+    List<String> instructions = [
+      "Instruction 1",
+      "Instruction 2",
+      "Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3Instruction 3",
+      "Instruction 4",
+      "Instruction 5",
+      "Instruction 6",
+    ];
 
     return Scaffold(
       body: SafeArea(
@@ -25,34 +29,31 @@ class InstructionsPage extends StatelessWidget {
               children: [
                 Stack(
                   children: [
-                    Container(
-                      margin: EdgeInsets.symmetric(
-                          vertical: height * 0.026, horizontal: width * 0.05),
-                      width: width,
-                      height: height * 0.6,
-                      decoration: BoxDecoration(
-                          color: const Color(0xfffff1de),
-                          borderRadius: BorderRadius.circular(18),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.3),
-                              spreadRadius: 0,
-                              blurRadius: 5.0,
-                            )
-                          ]),
-                      child: SizedBox(
-                        child: ListView.builder(
-                          padding: EdgeInsets.only(
-                              top: height * 0.05, bottom: height * 0.05),
-                          itemCount: itemCount,
-                          itemBuilder: (BuildContext context, int index) {
+                    IntrinsicHeight(
+                      child: Container(
+                        margin: EdgeInsets.symmetric(
+                            vertical: height * 0.026, horizontal: width * 0.05),
+                        width: width,
+                        decoration: BoxDecoration(
+                            color: const Color(0xfffff1de),
+                            borderRadius: BorderRadius.circular(18),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.3),
+                                spreadRadius: 0,
+                                blurRadius: 5.0,
+                              )
+                            ]),
+                        child: Column(
+                          children: instructions.map((instruction) {
                             return ForText(
-                                text: "sad",
-                                width: width,
-                                height: height,
-                                path:
-                                    "https://img.freepik.com/free-photo/free-photo-black-grunge-abstract-background-pattern-wallpaper_1340-34114.jpg?size=626&ext=jpg");
-                          },
+                              text: instruction,
+                              width: width,
+                              height: height,
+                              path:
+                                  "https://img.freepik.com/free-photo/free-photo-black-grunge-abstract-background-pattern-wallpaper_1340-34114.jpg?size=626&ext=jpg",
+                            );
+                          }).toList(),
                         ),
                       ),
                     ),
@@ -94,7 +95,6 @@ class InstructionsPage extends StatelessWidget {
                   ],
                 ),
                 Container(
-                  height: height * 0.6,
                   width: width,
                   decoration: BoxDecoration(
                       color: const Color(0xfffff1de),
@@ -122,18 +122,17 @@ class InstructionsPage extends StatelessWidget {
                             color: Color(0xff4b519d),
                             fontSize: 24),
                       ),
-                      SizedBox(
-                        height: totalListViewHeight,
-                        child: ListView.builder(
-                          itemCount: itemCount,
-                          itemBuilder: (BuildContext context, int index) {
+                      IntrinsicHeight(
+                        child: Column(
+                          children: instructions.map((instruction) {
                             return ForText(
-                                text: "sad",
-                                width: width,
-                                height: height,
-                                path:
-                                    "https://img.freepik.com/free-photo/free-photo-black-grunge-abstract-background-pattern-wallpaper_1340-34114.jpg?size=626&ext=jpg");
-                          },
+                              text: instruction,
+                              width: width,
+                              height: height,
+                              path:
+                                  "https://img.freepik.com/free-photo/free-photo-black-grunge-abstract-background-pattern-wallpaper_1340-34114.jpg?size=626&ext=jpg",
+                            );
+                          }).toList(),
                         ),
                       ),
                     ],

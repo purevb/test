@@ -35,7 +35,7 @@ class BrandPage extends StatelessWidget {
               ),
               child: GridView.builder(
                   // scrollDirection: Axis.vertical,
-                  // physics: const NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   padding: EdgeInsets.only(
                       top: height * 0.05,
                       left: width * 0.05,
@@ -52,11 +52,14 @@ class BrandPage extends StatelessWidget {
                   itemBuilder: (BuildContext context, int index) {
                     return GestureDetector(
                       onTap: () => Get.dialog(
-                        const Dialog(
-                            insetPadding:
-                                EdgeInsets.only(bottom: 0, left: 15, right: 15),
+                        Dialog(
+                            insetPadding: const EdgeInsets.only(
+                                bottom: 0, left: 15, right: 15),
                             backgroundColor: Colors.transparent,
-                            child: MyDialog()
+                            child: MyDialog(
+                              width: width,
+                              height: height,
+                            )
 
                             // Container(
                             //   width: width,
@@ -89,7 +92,7 @@ class BrandPage extends StatelessWidget {
                 )),
             Positioned(
               top: height * 0.004,
-              right: width * 0.245,
+              right: width * 0.23,
               child: Container(
                 width: width * 0.55,
                 height: height * 0.067,
