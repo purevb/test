@@ -110,7 +110,7 @@ class Amjilttai extends StatelessWidget {
                                   padding: EdgeInsets.all(8.0),
                                   child: Text(
                                     textAlign: TextAlign.center,
-                                    "Your content goes heqerqwerqwesdfgsadfasdfasdfasdfasdfasddfgsdfgsdfg sdgsd gs gsdfg sdgsdfg darsg rqwer ",
+                                    "Your contasdASDASFADSF ASDFASD FDSAF ASDFASFADSFASDF ADFAD ent goes heqerqwerqwesdfgsadfasdfasdfasdfasdfasddfgsdfgsdfg sdgsd gs gsdfg sdgsdfg darsg rqwer ",
                                     //text
                                     style: TextStyle(
                                       fontFamily: "ComicSansMSS",

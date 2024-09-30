@@ -68,60 +68,60 @@ class MyErh extends StatelessWidget {
                         ),
                       ),
                     ),
-                    // Container(
-                    //   padding: EdgeInsets.only(top: height * 0.07),
-                    //   decoration: BoxDecoration(
-                    //     boxShadow: [
-                    //       BoxShadow(
-                    //         color: Colors.black.withOpacity(0.3),
-                    //         spreadRadius: 1,
-                    //         blurRadius: 10.0,
-                    //       ),
-                    //       const BoxShadow(
-                    //         color: Color(0xffE5BF98),
-                    //       ),
-                    //       const BoxShadow(
-                    //         color: Color(0xffFFF1DD),
-                    //         spreadRadius: -2.0,
-                    //         blurRadius: 12.0,
-                    //       ),
-                    //     ],
-                    //     borderRadius: BorderRadius.circular(26),
-                    //     image: const DecorationImage(
-                    //       fit: BoxFit.fill,
-                    //       image: AssetImage(
-                    //         "assets/images/brand/sun.png",
-                    //       ),
-                    //     ),
-                    //   ),
-                    //   child: Column(
-                    //     mainAxisSize: MainAxisSize.min,
-                    //     children: [
-                    //       Container(
-                    //         margin: const EdgeInsets.only(bottom: 5),
-                    //         height: height * 0.18,
-                    //         width: width * 0.35,
-                    //         child: Image.network(
-                    //           fit: BoxFit.fill,
-                    //           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjtJ1hzjN-R1FI9BfWxQ56vhVT8Bn9dXUzYQMKPsG7ay1A3VTP",
-                    //         ),
-                    //       ),
-                    //       const Padding(
-                    //         padding: EdgeInsets.all(8.0),
-                    //         child: Text(
-                    //           textAlign: TextAlign.center,
-                    //           "Your content goes heqerqwerqwesdfgsadfasdfasdfasdfasdfasddfgsdfgsdfg sdgsd gs gsdfg sdgsdfg darsg rqwer ",
-                    //           style: TextStyle(
-                    //             fontFamily: "ComicSansMSS",
-                    //             fontSize: 17,
-                    //             color: Color(0xff4C519E),
-                    //             fontWeight: FontWeight.bold,
-                    //           ),
-                    //         ),
-                    //       ),
-                    //     ],
-                    //   ),
-                    // ),
+                    Container(
+                      padding: EdgeInsets.only(top: height * 0.07),
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.3),
+                            spreadRadius: 1,
+                            blurRadius: 10.0,
+                          ),
+                          const BoxShadow(
+                            color: Color(0xffE5BF98),
+                          ),
+                          const BoxShadow(
+                            color: Color(0xffFFF1DD),
+                            spreadRadius: -2.0,
+                            blurRadius: 12.0,
+                          ),
+                        ],
+                        borderRadius: BorderRadius.circular(26),
+                        image: const DecorationImage(
+                          fit: BoxFit.fill,
+                          image: AssetImage(
+                            "assets/images/brand/sun.png",
+                          ),
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Container(
+                            margin: const EdgeInsets.only(bottom: 5),
+                            height: height * 0.18,
+                            width: width * 0.35,
+                            child: Image.network(
+                              fit: BoxFit.fill,
+                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjtJ1hzjN-R1FI9BfWxQ56vhVT8Bn9dXUzYQMKPsG7ay1A3VTP",
+                            ),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text(
+                              textAlign: TextAlign.center,
+                              "Your content goes heqerqwerqwesdfgsadfasdfasdfasdfasdfasddfgsdfgsdfg sdgsd gs gsdfg sdgsdfg darsg rqwer ",
+                              style: TextStyle(
+                                fontFamily: "ComicSansMSS",
+                                fontSize: 17,
+                                color: Color(0xff4C519E),
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),

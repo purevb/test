@@ -12,7 +12,10 @@
 //       body: Container(
 //           width: width,
 //           height: height,
-//           child: Lottie.asset("assets/animations/zam/zam.json")
+//           child: LottieBuilder.asset(
+
+//           ) 
+//           // Lottie.asset("assets/animations/start.json")
 //           // Lottie.asset("assets/animations/start.json")
 //           // Lottie.asset("assets/animations/iphone.json",
 //           //     width: 100, height: 100),

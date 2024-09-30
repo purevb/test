@@ -16,14 +16,14 @@ class Uldegdelhureltsehgui extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return
-        // Center(
-        //   child:
-        //       //  IntrinsicHeight(
-        //   child:
+        Center(
+          child:
+               IntrinsicHeight(
+          child:
         Container(
       margin: const EdgeInsets.only(right: 10, left: 10, top: 50),
       padding: const EdgeInsets.all(10),
-      color: Colors.black,
+      color: Colors.transparent,
       child: Stack(
         alignment: Alignment.bottomCenter,
         children: [
@@ -55,19 +55,19 @@ class Uldegdelhureltsehgui extends StatelessWidget {
               ),
               child: Stack(
                 children: [
-                  // Align(
-                  //   alignment: const Alignment(1.18, -1.28),
-                  //   child: GestureDetector(
-                  //     onTap: () => Get.back(),
-                  //     child: Transform.rotate(
-                  //       angle: 0.1,
-                  //       child: Image.asset(
-                  //         "assets/images/brand/x.png",
-                  //         width: width * 0.15,
-                  //       ),
-                  //     ),
-                  //   ),
-                  // ),
+                  Align(
+                    alignment: const Alignment(1.18, -1.28),
+                    child: GestureDetector(
+                      onTap: () => Get.back(),
+                      child: Transform.rotate(
+                        angle: 0.1,
+                        child: Image.asset(
+                          "assets/images/brand/x.png",
+                          width: width * 0.15,
+                        ),
+                      ),
+                    ),
+                  ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -145,9 +145,9 @@ class Uldegdelhureltsehgui extends StatelessWidget {
                                         image: AssetImage(
                                             "assets/images/popup/ugui.png"))),
                                 child:
-                                    // const Align(
-                                    //   alignment: Alignment(0, -0.5),
-                                    //   child:
+                                    const Align(
+                                      alignment: Alignment(0, -0.5),
+                                      child:
                                     Text(
                                   "Үгүй",
                                   style: TextStyle(
@@ -161,7 +161,7 @@ class Uldegdelhureltsehgui extends StatelessWidget {
                                         offset: Offset(3.0, 3.0),
                                       ),
                                     ],
-                                    // )
+                                    ),
                                   ),
                                 ),
                               ),
@@ -177,9 +177,9 @@ class Uldegdelhureltsehgui extends StatelessWidget {
                                         image: AssetImage(
                                             "assets/images/popup/tiim.png"))),
                                 child: const
-                                    // Align(
-                                    //   alignment: Alignment(0, -0.5),
-                                    //   child:
+                                    Align(
+                                      alignment: Alignment(0, -0.5),
+                                      child:
                                     Text(
                                   "Tийм",
                                   style: TextStyle(
@@ -193,7 +193,7 @@ class Uldegdelhureltsehgui extends StatelessWidget {
                                         offset: Offset(3.0, 3.0),
                                       ),
                                     ],
-                                    // ),
+                                    ),
                                   ),
                                 ),
                               ),
@@ -242,8 +242,8 @@ class Uldegdelhureltsehgui extends StatelessWidget {
           ),
         ],
       ),
-      // ),
-      // ),
+      ),
+               ),
     );
   }
 }

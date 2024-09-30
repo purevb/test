@@ -15,10 +15,11 @@ class Superbeleg extends StatelessWidget {
     double height = MediaQuery.of(context).size.height;
 
     return Scaffold(
-        body: Uldegdelhureltsehgui(
-      width: width,
-      height: height,
-    )
+        body: 
+    //     Uldegdelhureltsehgui(
+    //   width: width,
+    //   height: height,
+    // )
         //         MyErh(
         //   width: width,
         //   height: height,
@@ -27,10 +28,10 @@ class Superbeleg extends StatelessWidget {
         //   width: width,
         //   height: height,
         // )
-        //     MyPopUp(
-        //   width: width,
-        //   height: height,
-        // ),
+            MyPopUp(
+          width: width,
+          height: height,
+        ),
         );
   }
 }

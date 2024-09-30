@@ -161,8 +161,8 @@ class HomePage extends StatelessWidget {
                                                       padding:
                                                           const EdgeInsets.only(
                                                         top: 25,
-                                                        right: 20,
-                                                        left: 20,
+                                                        right: 50,
+                                                        left: 50,
                                                         // bottom: 20
                                                       ),
                                                       gridDelegate:
