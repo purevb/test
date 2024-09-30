@@ -83,7 +83,7 @@ class HomePage extends StatelessWidget {
                         context: context,
                         builder: (context) => Container(
                           height: height * 0.65,
-                          color: Colors.black,
+                          color: Colors.transparent,
                           width: width,
                           child: Stack(
                             alignment: Alignment.bottomCenter,
@@ -154,17 +154,17 @@ class HomePage extends StatelessWidget {
                                                           BorderRadius.circular(
                                                               31)),
                                                   child: GridView.builder(
-                                                  // padding: EdgeInsets.only(top: 20,right: 20,left: 20,bottom: 0),
+                                                      // padding: EdgeInsets.only(top: 20,right: 20,left: 20,bottom: 0),
 
                                                       physics:
                                                           const NeverScrollableScrollPhysics(),
                                                       padding:
                                                           const EdgeInsets.only(
-                                                              top: 25,
-                                                              right: 20,
-                                                              left: 20,
-                                                              // bottom: 20
-                                                              ),
+                                                        top: 25,
+                                                        right: 20,
+                                                        left: 20,
+                                                        // bottom: 20
+                                                      ),
                                                       gridDelegate:
                                                           const SliverGridDelegateWithFixedCrossAxisCount(
                                                               mainAxisSpacing:
