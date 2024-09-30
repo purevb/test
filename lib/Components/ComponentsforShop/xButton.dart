@@ -19,29 +19,33 @@ class Xbutton extends StatelessWidget {
     return Stack(
       children: [
         SizedBox(
-          width: width,
-          height: width * 0.162,
+          width: width*0.7,
+          height: width *0.7,
           child: Image.asset(
             "assets/images/home/bottomsheet/bumbug.png",
             fit: BoxFit.fill,
           ),
         ),
         Align(
-          alignment: Alignment.bottomCenter,
-          child: Padding(
-            padding: const EdgeInsets.only(bottom: 18),
-            child: Text(
+          alignment: Alignment(0,0.7),
+          child: 
+          // Padding(
+          //   padding:  EdgeInsets.only(bottom: height*0.026),
+          //   child:
+             Text(
               price,
               style:
                   const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.76),
-            ),
+            // ),
           ),
         ),
         Align(
-          alignment: Alignment.centerRight,
-          child: Padding(
-            padding: const EdgeInsets.only(bottom: 25, right: 18),
-            child: Text(
+          alignment: Alignment(0.4,-0.21),
+          child: 
+          // Padding(
+            // padding:  EdgeInsets.only(bottom: height*0.038, right: width*0.038),
+            // child:
+             Text(
               multiple,
               style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -56,7 +60,7 @@ class Xbutton extends StatelessWidget {
                   ]),
             ),
           ),
-        )
+        // )
       ],
     );
   }

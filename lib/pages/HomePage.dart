@@ -82,10 +82,11 @@ class HomePage extends StatelessWidget {
                         backgroundColor: Colors.transparent,
                         context: context,
                         builder: (context) => Container(
-                          height: height * 0.6,
+                          height: height * 0.65,
+                          color: Colors.black,
                           width: width,
                           child: Stack(
-                            alignment: Alignment.center,
+                            alignment: Alignment.bottomCenter,
                             children: [
                               Column(
                                 children: [
@@ -95,7 +96,7 @@ class HomePage extends StatelessWidget {
                                     color: Colors.transparent,
                                   ),
                                   SizedBox(
-                                      height: height * 0.5,
+                                      height: height * 0.55,
                                       width: width,
                                       child: Column(
                                         children: [
@@ -119,7 +120,7 @@ class HomePage extends StatelessWidget {
                                                 left: width * 0.05,
                                                 right: width * 0.05,
                                                 bottom: height * 0.03),
-                                            height: height * 0.485,
+                                            height: height * 0.535,
                                             width: width,
                                             decoration: const BoxDecoration(
                                               gradient: LinearGradient(
@@ -137,7 +138,7 @@ class HomePage extends StatelessWidget {
                                                       .spaceBetween,
                                               children: [
                                                 Container(
-                                                  height: height * 0.22,
+                                                  height: height * 0.27,
                                                   decoration: BoxDecoration(
                                                       boxShadow: [
                                                         BoxShadow(
@@ -153,20 +154,23 @@ class HomePage extends StatelessWidget {
                                                           BorderRadius.circular(
                                                               31)),
                                                   child: GridView.builder(
+                                                  // padding: EdgeInsets.only(top: 20,right: 20,left: 20,bottom: 0),
+
                                                       physics:
                                                           const NeverScrollableScrollPhysics(),
                                                       padding:
                                                           const EdgeInsets.only(
                                                               top: 25,
-                                                              right: 45,
-                                                              left: 45,
-                                                              bottom: 20),
+                                                              right: 20,
+                                                              left: 20,
+                                                              // bottom: 20
+                                                              ),
                                                       gridDelegate:
                                                           const SliverGridDelegateWithFixedCrossAxisCount(
                                                               mainAxisSpacing:
                                                                   10,
                                                               crossAxisSpacing:
-                                                                  30,
+                                                                  10,
                                                               crossAxisCount: 3,
                                                               mainAxisExtent:
                                                                   80,
