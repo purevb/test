@@ -13,19 +13,20 @@ class MyDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 10),
-        color: Colors.white,
-        height: height * 0.7,
+        margin: const EdgeInsets.symmetric(horizontal: 20),
+        // color: Colors.white,
+        height: height * 0.5,
         // width: 5000,
         child: Stack(
           alignment: Alignment.bottomCenter,
           children: [
             Container(
+              padding: EdgeInsets.only(bottom: 7),
               height: height * 0.66,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(36),
                   boxShadow: const [
-                    BoxShadow(color: Color(0xff714321)),
+                    BoxShadow(color: Color.fromARGB(255, 148, 98, 62)),
                     BoxShadow(
                       color: Color(0xffD7803F),
                       spreadRadius: -12.0,
@@ -34,7 +35,7 @@ class MyDialog extends StatelessWidget {
                   ]),
               child: Container(
                 padding: const EdgeInsets.only(
-                    bottom: 16, top: 16, right: 16, left: 16),
+                    bottom: 10, top: 10, right: 10, left: 10),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(36),
                     boxShadow: const [
@@ -47,7 +48,7 @@ class MyDialog extends StatelessWidget {
                     ]),
                 child: Stack(children: [
                   Align(
-                    alignment: const Alignment(1.15, -1.18),
+                    alignment: const Alignment(1.18, -1.27),
                     child: GestureDetector(
                       onTap: () => Get.back(),
                       child: Transform.rotate(
@@ -60,9 +61,6 @@ class MyDialog extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    // margin: EdgeInsets.only(
-                    //     top: height * 0.05, bottom: 12, right: 8, left: 8),
-
                     width: width,
                     height: height,
                     decoration: BoxDecoration(
@@ -80,13 +78,13 @@ class MyDialog extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: width * 0.05,
-              top: height * 0.064,
+              left: 20,
+              top: 20,
               child: SizedBox(
                 width: width * 0.17,
                 height: width * 0.17,
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(16),
                   child: Image.asset(
                     "assets/images/brand/zuv.png",
                     fit: BoxFit.fill,

@@ -30,7 +30,7 @@ class MyItems extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
-                      margin: EdgeInsets.only(right: width * 0.02),
+                      margin: const EdgeInsets.only(right: 10),
                       padding: const EdgeInsets.all(3),
                       decoration: BoxDecoration(
                         gradient: const LinearGradient(

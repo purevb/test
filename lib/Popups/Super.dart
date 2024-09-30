@@ -15,20 +15,20 @@ class Superbeleg extends StatelessWidget {
     double height = MediaQuery.of(context).size.height;
 
     return Scaffold(
-        body: 
-         Uldegdelhureltsehgui(
+        body:
+            //     Uldegdelhureltsehgui(
+            //   width: width,
+            //   height: height,
+            // )
+            MyErh(
       width: width,
       height: height,
     )
-    //     MyErh(
-    //   width: width,
-    //   height: height,
-    // )
-    //     Amjilttai(
-    //   width: width,
-    //   height: height,
-    // )
-        // MyPopUp(
+        //         Amjilttai(
+        //   width: width,
+        //   height: height,
+        // )
+        //     MyPopUp(
         //   width: width,
         //   height: height,
         // ),

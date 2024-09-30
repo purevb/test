@@ -113,7 +113,7 @@ class TransactionHistory extends StatelessWidget {
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 20,
-                              fontFamily: "ComicSansMS",
+                              fontFamily: "ComicSansMSS",
                               fontWeight: FontWeight.bold,
                             ),
                           ),
