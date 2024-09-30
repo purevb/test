@@ -74,6 +74,9 @@ flutter:
     - assets/animations/zam/
     - assets/images/home/bottomsheet/
     - assets/images/popup/
+    - assets/images/colored/
+    - assets/images/noColor/
+    
 
 
   #   - images/a_dot_ham.jpeg

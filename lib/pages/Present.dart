@@ -137,13 +137,12 @@ class _PresentPageState extends State<PresentPage> {
                                 child: GridView.builder(
                                   padding: const EdgeInsets.only(top: 0),
                                   gridDelegate:
-                                      const SliverGridDelegateWithFixedCrossAxisCount(
-                                    mainAxisSpacing: 12,
-                                    crossAxisSpacing: 10,
-                                    crossAxisCount: 2,
-                                    childAspectRatio: 3.44 / 3,
-                                    // mainAxisExtent: 150
-                                  ),
+                                      SliverGridDelegateWithFixedCrossAxisCount(
+                                          mainAxisSpacing: 12,
+                                          crossAxisSpacing: 10,
+                                          crossAxisCount: 2,
+                                          // childAspectRatio: 3.44 / 3,
+                                          mainAxisExtent: height * 0.158),
                                   itemBuilder:
                                       (BuildContext context, int index) {
                                     return const JackJill(

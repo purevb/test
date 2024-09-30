@@ -42,7 +42,7 @@ class BrandPage extends StatelessWidget {
                     crossAxisSpacing: 10,
                     crossAxisCount: 2,
                     childAspectRatio: 3.25 / 3,
-                    mainAxisExtent: height * 0.155),
+                    mainAxisExtent: height * 0.157),
                 itemCount: 10,
                 itemBuilder: (BuildContext context, int index) {
                   return GestureDetector(

@@ -173,7 +173,7 @@ class HomePage extends StatelessWidget {
                                                                   10,
                                                               crossAxisCount: 3,
                                                               mainAxisExtent:
-                                                                  80,
+                                                                  100,
                                                               childAspectRatio:
                                                                   1 / 1),
                                                       itemCount: 6,
@@ -193,9 +193,10 @@ class HomePage extends StatelessWidget {
                                                       }),
                                                 ),
                                                 Container(
-                                                  padding: EdgeInsets.symmetric(
-                                                      horizontal: width * 0.06,
-                                                      vertical: height * 0.02),
+                                                  padding: const EdgeInsets
+                                                      .symmetric(
+                                                      horizontal: 30,
+                                                      vertical: 20),
                                                   height: height * 0.18,
                                                   decoration: BoxDecoration(
                                                       boxShadow: [
@@ -495,7 +496,9 @@ class HomePage extends StatelessWidget {
                         image: AssetImage("assets/images/home/too.png"),
                       )),
                       child: const Align(
-                        alignment: Alignment(0, -1),
+                        widthFactor: 10,
+                        heightFactor: 10,
+                        alignment: Alignment(0, -0.8),
                         child: Text(
                           "9",
                           style: TextStyle(
