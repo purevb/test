@@ -32,7 +32,7 @@ class _PresentPageState extends State<PresentPage> {
               Container(
                 padding: EdgeInsets.symmetric(horizontal: width * 0.05),
                 width: width * 0.9,
-                height: height * 0.86,
+                height: height * 0.83,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
                   color: const Color(0xfffff1de),
@@ -152,7 +152,7 @@ class _PresentPageState extends State<PresentPage> {
                           )
                         : Container(
                             margin: EdgeInsets.only(
-                                top: height * 0.08, bottom: 100),
+                                top: height * 0.08,bottom: 20),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -227,7 +227,7 @@ class _PresentPageState extends State<PresentPage> {
                                   ),
                                 ),
                                 Container(
-                                  height: height * 0.5,
+                                  height: height * 0.6,
                                   width: width,
                                   child: GridView.builder(
                                     padding: const EdgeInsets.only(top: 0),
@@ -237,7 +237,7 @@ class _PresentPageState extends State<PresentPage> {
                                             crossAxisSpacing: 10,
                                             crossAxisCount: 2,
                                             // childAspectRatio: 3.44 / 3,
-                                            mainAxisExtent: height * 0.158),
+                                            mainAxisExtent: height * 0.175),
                                     itemBuilder:
                                         (BuildContext context, int index) {
                                       return const JackJill(
