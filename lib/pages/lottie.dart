@@ -66,7 +66,7 @@ class _LottieFileState extends State<LottieFile> with TickerProviderStateMixin {
               child: Image.asset("assets/images/home/iphone.png"),
             ),
           Container(
-            margin: const EdgeInsets.only(top: 437, right: 4.8),
+            margin: const EdgeInsets.only(top: 399.5, left: 5),
             width: width,
             height: height * 0.1,
             child: Stack(
@@ -95,14 +95,14 @@ class _LottieFileState extends State<LottieFile> with TickerProviderStateMixin {
                 Align(
                     alignment: const Alignment(-0.05, 0),
                     child: Image.asset(
-                      "assets/images/noColor/o.png",
+                      "assets/images/colored/o.png",
                       width: width * 0.11,
                       // height: height * 0.08,
                     )),
                 Align(
                     alignment: const Alignment(0.13, 0),
                     child: Image.asset(
-                      "assets/images/noColor/n.png",
+                      "assets/images/colored/n.png",
                       width: width * 0.108,
                       // height: height * 0.08,
                     )),
@@ -116,14 +116,14 @@ class _LottieFileState extends State<LottieFile> with TickerProviderStateMixin {
                 Align(
                     alignment: const Alignment(0.52, 0.2),
                     child: Image.asset(
-                      "assets/images/noColor/1.png",
+                      "assets/images/colored/1.png",
                       width: width * 0.131,
                       // height: height * 0.08,
                     )),
                 Align(
-                    alignment: const Alignment(0.7, -0.18),
+                    alignment: const Alignment(0.705, -0.18),
                     child: Image.asset(
-                      "assets/images/noColor/6.png",
+                      "assets/images/colored/6.png",
                       width: width * 0.105,
                       // height: height * 0.08,
                     )),
