@@ -32,7 +32,7 @@ class _PresentPageState extends State<PresentPage> {
               Container(
                 padding: EdgeInsets.symmetric(horizontal: width * 0.05),
                 width: width * 0.9,
-                height: height * 0.83,
+                height: height * 0.81,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
                   color: const Color(0xfffff1de),
@@ -100,30 +100,32 @@ class _PresentPageState extends State<PresentPage> {
                               ),
                             ),
                           ),
-                          Flexible(
-                            child: GridView.builder(
-                              padding: const EdgeInsets.only(top: 5),
-                              shrinkWrap: true,
-                              gridDelegate:
-                                  SliverGridDelegateWithFixedCrossAxisCount(
-                                mainAxisSpacing: 12,
-                                crossAxisSpacing: 10,
-                                crossAxisCount: 2,
-                                mainAxisExtent: height * 0.17,
+                           Container(
+                            height: height*0.5,
+                             child: GridView.builder(
+                                padding: const EdgeInsets.only(top: 5),
+                                shrinkWrap: true,
+                                gridDelegate:
+                                    SliverGridDelegateWithFixedCrossAxisCount(
+                                  mainAxisSpacing: 12,
+                                  crossAxisSpacing: 20,
+                                  crossAxisCount: 2,
+                                  mainAxisExtent: height * 0.155,
+                             childAspectRatio: 3/3
+                                ),
+                                itemCount: 18,
+                                itemBuilder: (BuildContext context, int index) {
+                                  return const JackJill(
+                                    logo:
+                                        "https://t4.ftcdn.net/jpg/00/64/84/11/240_F_64841101_ri4S0bn81aXsHvWk3UVHYazsA0api11Q.jpg",
+                                    path:
+                                        "https://t4.ftcdn.net/jpg/00/64/84/11/240_F_64841101_ri4S0bn81aXsHvWk3UVHYazsA0api11Q.jpg",
+                                    name: "Jack&Jill",
+                                    detail: "250gr",
+                                  );
+                                },
                               ),
-                              itemCount: 18,
-                              itemBuilder: (BuildContext context, int index) {
-                                return const JackJill(
-                                  logo:
-                                      "https://t4.ftcdn.net/jpg/00/64/84/11/240_F_64841101_ri4S0bn81aXsHvWk3UVHYazsA0api11Q.jpg",
-                                  path:
-                                      "https://t4.ftcdn.net/jpg/00/64/84/11/240_F_64841101_ri4S0bn81aXsHvWk3UVHYazsA0api11Q.jpg",
-                                  name: "Jack&Jill",
-                                  detail: "250gr",
-                                );
-                              },
-                            ),
-                          ),
+                           ),
                         ],
                       )
                     : erh

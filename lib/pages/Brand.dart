@@ -37,12 +37,12 @@ class BrandPage extends StatelessWidget {
                   physics: const NeverScrollableScrollPhysics(),
                   padding: const EdgeInsets.only(
                       top: 40, left: 20, right: 20, bottom: 20),
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  gridDelegate:const SliverGridDelegateWithFixedCrossAxisCount(
                       mainAxisSpacing: 10,
                       crossAxisSpacing: 10,
                       crossAxisCount: 2,
-                      childAspectRatio: 3.25 / 3,
-                      mainAxisExtent: height * 0.165),
+                      childAspectRatio: 3.5 / 3,
+                      ),
                   itemCount: 10,
                   itemBuilder: (BuildContext context, int index) {
                     return GestureDetector(

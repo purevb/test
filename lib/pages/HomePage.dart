@@ -392,11 +392,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   Future<dynamic> bottomsheet(
       BuildContext context, double height, double width) {
     return showMaterialModalBottomSheet(
-      backgroundColor: Colors.black,
-      context: context,
+      backgroundColor: Colors.transparent,
+        context: context,
       builder: (context) => IntrinsicHeight(
         child: Container(
-          width: width,
           child: Stack(
             alignment: Alignment.bottomCenter,
             children: [
@@ -462,15 +461,15 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                           const NeverScrollableScrollPhysics(),
                                       padding: const EdgeInsets.only(
                                           top: 25,
-                                          right: 50,
-                                          left: 50,
-                                          bottom: 20),
+                                          right: 20,
+                                          left: 20,
+                                          bottom: 30),
                                       gridDelegate:
                                           SliverGridDelegateWithFixedCrossAxisCount(
-                                        mainAxisSpacing: 20,
+                                        mainAxisSpacing: 10,
                                         crossAxisSpacing: 30,
                                         crossAxisCount: 3,
-                                        mainAxisExtent: height * 0.08,
+                                        mainAxisExtent: height * 0.09,
                                         // childAspectRatio:
                                         //     2 / 5
                                       ),
@@ -480,7 +479,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                         return GestureDetector(
                                           onTap: () => print("1x"),
                                           child: Xbutton(
-                                            multiple: '1x',
+                                            multiple: 'x1',
                                             price: '300₮',
                                             width: width,
                                             height: height,
