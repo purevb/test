@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:oilgood_avaarai/Popups/Super.dart';
 import 'package:oilgood_avaarai/pages/LoadingScreen.dart';
 import 'package:oilgood_avaarai/pages/TransactionHistory.dart';
+import 'package:oilgood_avaarai/pages/erhavah.dart';
 import 'package:oilgood_avaarai/pages/lottie.dart';
 
 void main() {
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home:
+          // ErhAvahPage()
           // Superbeleg()
           // LottieFile()
           LoadingScreen(),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Xbutton extends StatelessWidget {
   final double width;
@@ -16,54 +15,44 @@ class Xbutton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        SizedBox(
-          width: width * 0.7,
-          // height: width * 0.7,
-          child: Image.asset(
-            "assets/images/home/bottomsheet/bumbug.png",
+    return Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(
             fit: BoxFit.fill,
+            image: AssetImage("assets/images/home/bottomsheet/bumbug.png")),
+      ),
+      child: Stack(
+        children: [
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding: EdgeInsets.only(right: width * 0.5),
+              child: Text(
+                price,
+                style: const TextStyle(
+                    fontWeight: FontWeight.bold, fontSize: 13.76),
+              ),
+            ),
           ),
-        ),
-        Align(
-          widthFactor: 0,
-          heightFactor: 0,
-          alignment: const Alignment(-3, -6.7),
-          child:
-              // Padding(
-              //   padding:  EdgeInsets.only(bottom: height*0.026),
-              //   child:
-              Text(
-            price,
-            style:
-                const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.76),
-            // ),
+          Align(
+            alignment: Alignment.centerRight,
+            child: Text(
+              multiple,
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22,
+                  color: Colors.white,
+                  shadows: [
+                    Shadow(
+                      color: Colors.black.withOpacity(0.7),
+                      blurRadius: 2.0,
+                      offset: const Offset(3.0, 3.0),
+                    ),
+                  ]),
+            ),
           ),
-        ),
-        Align(
-          alignment: Alignment(0.4, -0.21),
-          child:
-              // Padding(
-              // padding:  EdgeInsets.only(bottom: height*0.038, right: width*0.038),
-              // child:
-              Text(
-            multiple,
-            style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
-                color: Colors.white,
-                shadows: [
-                  Shadow(
-                    color: Colors.black.withOpacity(0.7),
-                    blurRadius: 2.0,
-                    offset: const Offset(3.0, 3.0),
-                  ),
-                ]),
-          ),
-        ),
-        // )
-      ],
+        ],
+      ),
     );
   }
 }

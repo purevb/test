@@ -15,30 +15,27 @@ class MyButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => print("${text}"),
-      child: Container(
-        height: height * 0.1,
-        decoration: BoxDecoration(
-            image: DecorationImage(
-          image: AssetImage(paths),
-        )),
-        child: Align(
-          alignment: const Alignment(0, -0.5),
-          child: Text(
-            text,
-            style: const TextStyle(
-              fontFamily: "ComicSansMS",
-              color: Colors.white,
-              fontSize: 40,
-              shadows: [
-                Shadow(
-                  color: Color(0xffc4390f),
-                  blurRadius: 2.0,
-                  offset: Offset(3.0, 1.0),
-                ),
-              ],
-            ),
+    return Container(
+      height: height * 0.09,
+      decoration: BoxDecoration(
+          image: DecorationImage(
+        image: AssetImage(paths),
+      )),
+      child: Align(
+        alignment: const Alignment(0, -0.8),
+        child: Text(
+          text,
+          style: const TextStyle(
+            fontFamily: "ComicSansMS",
+            color: Colors.white,
+            fontSize: 40,
+            shadows: [
+              Shadow(
+                color: Color(0xffc4390f),
+                blurRadius: 2.0,
+                offset: Offset(3.0, 1.0),
+              ),
+            ],
           ),
         ),
       ),

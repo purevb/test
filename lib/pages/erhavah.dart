@@ -12,14 +12,15 @@ import 'package:oilgood_avaarai/pages/Present.dart';
 import 'package:oilgood_avaarai/pages/TransactionHistory.dart';
 import 'package:oilgood_avaarai/pages/lottie.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class ErhAvahPage extends StatefulWidget {
+  const ErhAvahPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<ErhAvahPage> createState() => _ErhAvahPageState();
 }
 
-class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
+class _ErhAvahPageState extends State<ErhAvahPage>
+    with TickerProviderStateMixin {
   late AnimationController _animationController;
   bool _isAnimationCompleted = false;
 
@@ -50,340 +51,319 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
     return Scaffold(
       body: SafeArea(
-        child: Stack(
-          children: [
-            Container(
-              padding: EdgeInsets.only(
-                  left: width * 0.05,
-                  right: width * 0.05,
-                  bottom: height * 0.04),
-              width: width,
-              height: height,
-              decoration: const BoxDecoration(
-                  image: DecorationImage(
-                image: AssetImage(
-                  "assets/images/home/realhomepage.png",
-                ),
-                fit: BoxFit.fill,
-              )),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      GestureDetector(
-                        onTap: () => Get.back(),
-                        child: Container(
-                          padding: EdgeInsets.only(top: height * 0.04),
-                          child: Image.asset(
-                            "assets/images/home/back.png",
-                            width: width * 0.12,
-                          ),
-                        ),
-                      ),
-                      Image.asset(
-                        "assets/images/home/avaarai.png",
-                        width: width * 0.6,
-                      ),
-                      GestureDetector(
-                        onTap: () => Get.to(() => const InstructionsPage()),
-                        child: Container(
-                          padding: EdgeInsets.only(top: height * 0.04),
-                          child: Image.asset(
-                            "assets/images/home/question.png",
-                            width: width * 0.12,
-                          ),
-                        ),
-                      ),
-                    ],
+        child: Center(
+          child: Stack(
+            children: [
+              Container(
+                padding: EdgeInsets.only(
+                    left: width * 0.05,
+                    right: width * 0.05,
+                    bottom: height * 0.04),
+                width: width,
+                height: height,
+                decoration: const BoxDecoration(
+                    image: DecorationImage(
+                  image: AssetImage(
+                    "assets/images/home/realhomepage.png",
                   ),
-                  SizedBox(
-                    height: height * 0.001,
-                    child:
-                        LottieBuilder.asset("assets/animations/Iphone16.json"),
-                  ),
-                  Container(
-                    height: height * 0.08,
-                    width: width * 0.76,
-                    child: Stack(
+                  fit: BoxFit.fill,
+                )),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        if (!_isAnimationCompleted)
-                          Align(
-                            child: FittedBox(
-                              fit: BoxFit.none,
+                        GestureDetector(
+                          onTap: () => Get.back(),
+                          child: Container(
+                            padding: EdgeInsets.only(top: height * 0.04),
+                            child: Image.asset(
+                              "assets/images/home/back.png",
+                              width: width * 0.12,
+                            ),
+                          ),
+                        ),
+                        Image.asset(
+                          "assets/images/home/avaarai.png",
+                          width: width * 0.6,
+                        ),
+                        GestureDetector(
+                          onTap: () => Get.to(() => const InstructionsPage()),
+                          child: Container(
+                            padding: EdgeInsets.only(top: height * 0.04),
+                            child: Image.asset(
+                              "assets/images/home/question.png",
+                              width: width * 0.12,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: height * 0.001,
+                      child: LottieBuilder.asset(
+                          "assets/animations/Iphone16.json"),
+                    ),
+                    Container(
+                      height: height * 0.08,
+                      width: width * 0.76,
+                      child: Stack(
+                        children: [
+                          if (!_isAnimationCompleted)
+                            Align(
+                              child: FittedBox(
+                                fit: BoxFit.none,
+                                child: Container(
+                                  padding: EdgeInsets.only(bottom: 1),
+                                  width: width * 1.061,
+                                  child: LottieBuilder.asset(
+                                    "assets/animations/iphone.json",
+                                    controller: _animationController,
+                                    onLoaded: (composition) {
+                                      _animationController.duration =
+                                          composition.duration;
+                                      _animationController.forward();
+                                    },
+                                    repeat: false,
+                                  ),
+                                ),
+                              ),
+                            )
+                          else
+                            // SizedBox(
+                            //   height: height * 0.078,
+                            //   width: width * 0.76,
+                            //   child: Image.asset(
+                            //     "assets/images/home/iphone.png",
+                            //     fit: BoxFit.fill,
+                            //   ),
+                            // ),
+                            Container(
+                              // margin: const EdgeInsets.only(top: 399.5, left: 5),
+                              width: width,
+                              height: height * 0.1,
+                              child: Stack(
+                                children: [
+                                  Align(
+                                      alignment: const Alignment(-1, -0.6),
+                                      child: Image.asset(
+                                        "assets/images/colored/i.png",
+                                        width: width * 0.129,
+                                        // height: height * 0.08,
+                                      )),
+                                  Align(
+                                      alignment: const Alignment(-0.66, -0.5),
+                                      child: Image.asset(
+                                        "assets/images/colored/p.png",
+                                        width: width * 0.118,
+                                        // height: height * 0.08,
+                                      )),
+                                  Align(
+                                      alignment: const Alignment(-0.4, 0.1),
+                                      child: Image.asset(
+                                        "assets/images/colored/h.png",
+                                        width: width * 0.125,
+                                        // height: height * 0.08,
+                                      )),
+                                  Align(
+                                      alignment: const Alignment(-0.09, -0.3),
+                                      child: Image.asset(
+                                        "assets/images/colored/o.png",
+                                        width: width * 0.12,
+                                        // height: height * 0.08,
+                                      )),
+                                  Align(
+                                      alignment: const Alignment(0.16, 0),
+                                      child: Image.asset(
+                                        "assets/images/colored/n.png",
+                                        width: width * 0.115,
+                                        // height: height * 0.08,
+                                      )),
+                                  Align(
+                                      alignment: const Alignment(0.445, -0.2),
+                                      child: Image.asset(
+                                        "assets/images/colored/e.png",
+                                        width: width * 0.115,
+                                        // height: height * 0.08,
+                                      )),
+                                  Align(
+                                      alignment: const Alignment(0.75, 1),
+                                      child: Image.asset(
+                                        "assets/images/noColor/1.png",
+                                        width: width * 0.145,
+                                        // height: height * 0.08,
+                                      )),
+                                  Align(
+                                      alignment: const Alignment(1, -0.7),
+                                      child: Image.asset(
+                                        "assets/images/colored/6.png",
+                                        width: width * 0.114,
+                                        // height: height * 0.08,
+                                      )),
+                                ],
+                              ),
+                            )
+                          // Other image assets can follow similar pattern
+                        ],
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: Container(
+                        height: height * 0.35,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            GestureDetector(
+                              onTap: () => bottomsheet(context, height, width),
                               child: Container(
-                                padding: EdgeInsets.only(bottom: 1),
-                                width: width * 1.061,
-                                child: LottieBuilder.asset(
-                                  "assets/animations/iphone.json",
-                                  controller: _animationController,
-                                  onLoaded: (composition) {
-                                    _animationController.duration =
-                                        composition.duration;
-                                    _animationController.forward();
-                                  },
-                                  repeat: false,
+                                decoration: const BoxDecoration(boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.white,
+                                    spreadRadius: -6.0,
+                                    blurRadius: 20.0,
+                                  )
+                                ]),
+                                child: Stack(
+                                  alignment: const Alignment(0, 0.75),
+                                  children: [
+                                    Image.asset(
+                                      "assets/images/home/delguur.png",
+                                      width: width * 0.19,
+                                      height: width * 0.19,
+                                    ),
+                                    const Text(
+                                      "Дэлгүүр",
+                                      style: TextStyle(
+                                          fontFamily: "ComicSansMSS",
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12),
+                                    ),
+                                  ],
+                                ),
+                                // Image.asset(
+                                //   "assets/images/home/delguur.png",
+                                //   width: width * 0.19,
+                                //   height: width * 0.19,
+                                // ),
+                              ),
+                            ),
+                            GestureDetector(
+                              onTap: () => Get.to(() => const BrandPage()),
+                              child: Container(
+                                decoration: const BoxDecoration(boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.white,
+                                    spreadRadius: -6.0,
+                                    blurRadius: 20.0,
+                                  )
+                                ]),
+                                child: Stack(
+                                  alignment: const Alignment(0, 0.75),
+                                  children: [
+                                    Image.asset(
+                                      "assets/images/home/brand.png",
+                                      width: width * 0.19,
+                                      height: width * 0.19,
+                                    ),
+                                    const Text(
+                                      "Брэнд",
+                                      style: TextStyle(
+                                          fontFamily: "ComicSansMS",
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ),
-                          )
-                        else
-                          // SizedBox(
-                          //   height: height * 0.078,
-                          //   width: width * 0.76,
-                          //   child: Image.asset(
-                          //     "assets/images/home/iphone.png",
-                          //     fit: BoxFit.fill,
-                          //   ),
-                          // ),
-                          Container(
-                            // margin: const EdgeInsets.only(top: 399.5, left: 5),
-                            width: width,
-                            height: height * 0.1,
-                            child: Stack(
-                              children: [
-                                Align(
-                                    alignment: const Alignment(-1, -0.6),
-                                    child: Image.asset(
-                                      "assets/images/colored/i.png",
-                                      width: width * 0.129,
-                                      // height: height * 0.08,
-                                    )),
-                                Align(
-                                    alignment: const Alignment(-0.66, -0.5),
-                                    child: Image.asset(
-                                      "assets/images/colored/p.png",
-                                      width: width * 0.118,
-                                      // height: height * 0.08,
-                                    )),
-                                Align(
-                                    alignment: const Alignment(-0.4, 0.1),
-                                    child: Image.asset(
-                                      "assets/images/colored/h.png",
-                                      width: width * 0.125,
-                                      // height: height * 0.08,
-                                    )),
-                                Align(
-                                    alignment: const Alignment(-0.09, -0.3),
-                                    child: Image.asset(
-                                      "assets/images/colored/o.png",
-                                      width: width * 0.12,
-                                      // height: height * 0.08,
-                                    )),
-                                Align(
-                                    alignment: const Alignment(0.16, 0),
-                                    child: Image.asset(
-                                      "assets/images/colored/n.png",
-                                      width: width * 0.115,
-                                      // height: height * 0.08,
-                                    )),
-                                Align(
-                                    alignment: const Alignment(0.445, -0.2),
-                                    child: Image.asset(
-                                      "assets/images/colored/e.png",
-                                      width: width * 0.115,
-                                      // height: height * 0.08,
-                                    )),
-                                Align(
-                                    alignment: const Alignment(0.75, 1),
-                                    child: Image.asset(
-                                      "assets/images/colored/1.png",
-                                      width: width * 0.145,
-                                      // height: height * 0.08,
-                                    )),
-                                Align(
-                                    alignment: const Alignment(1, -0.7),
-                                    child: Image.asset(
-                                      "assets/images/colored/6.png",
-                                      width: width * 0.114,
-                                      // height: height * 0.08,
-                                    )),
-                              ],
+                            GestureDetector(
+                              onTap: () => Get.to(() => const PresentPage()),
+                              child: Container(
+                                decoration: const BoxDecoration(boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.white,
+                                    spreadRadius: -6.0,
+                                    blurRadius: 20.0,
+                                  )
+                                ]),
+                                child: Stack(
+                                  alignment: const Alignment(0, 0.65),
+                                  children: [
+                                    Image.asset(
+                                      "assets/images/home/beleg.png",
+                                      width: width * 0.19,
+                                      height: width * 0.19,
+                                    ),
+                                    const Text(
+                                      "Бэлэг",
+                                      style: TextStyle(
+                                          fontFamily: "ComicSansMS",
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12),
+                                    ),
+                                  ],
+                                ),
+                                // Image.asset(
+                                //   "assets/images/home/beleg.png",
+                                //   width: width * 0.19,
+                                //   height: width * 0.19,
+                                // ),
+                              ),
                             ),
-                          )
-                      ],
+                          ],
+                        ),
+                      ),
                     ),
-                  ),
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: Container(
-                      height: height * 0.35,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    Container(
+                      width: width,
+                      height: height * 0.24,
+                      child: Stack(
+                        alignment: Alignment.bottomCenter,
                         children: [
                           GestureDetector(
-                            onTap: () => bottomsheet(context, height, width),
-                            child: Container(
-                              decoration: const BoxDecoration(boxShadow: [
-                                BoxShadow(
-                                  color: Colors.white,
-                                  spreadRadius: -6.0,
-                                  blurRadius: 20.0,
-                                )
-                              ]),
-                              child: Stack(
-                                alignment: const Alignment(0, 0.75),
-                                children: [
-                                  Image.asset(
-                                    "assets/images/home/delguur.png",
-                                    width: width * 0.19,
-                                    height: width * 0.19,
-                                  ),
-                                  const Text(
-                                    "Дэлгүүр",
-                                    style: TextStyle(
-                                        fontFamily: "ComicSansMSS",
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 12),
-                                  ),
-                                ],
-                              ),
-                              // Image.asset(
-                              //   "assets/images/home/delguur.png",
-                              //   width: width * 0.19,
-                              //   height: width * 0.19,
-                              // ),
+                            onTap: () => Get.to(
+                              () => const LottieFile(),
+                              transition: Transition.fadeIn,
+                              duration: const Duration(milliseconds: 500),
                             ),
-                          ),
-                          GestureDetector(
-                            onTap: () => Get.to(() => const BrandPage()),
-                            child: Container(
-                              decoration: const BoxDecoration(boxShadow: [
-                                BoxShadow(
-                                  color: Colors.white,
-                                  spreadRadius: -6.0,
-                                  blurRadius: 20.0,
-                                )
-                              ]),
-                              child: Stack(
-                                alignment: const Alignment(0, 0.75),
-                                children: [
-                                  Image.asset(
-                                    "assets/images/home/brand.png",
-                                    width: width * 0.19,
-                                    height: width * 0.19,
-                                  ),
-                                  const Text(
-                                    "Брэнд",
-                                    style: TextStyle(
-                                        fontFamily: "ComicSansMS",
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 12),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          GestureDetector(
-                            onTap: () => Get.to(() => const PresentPage()),
-                            child: Container(
-                              decoration: const BoxDecoration(boxShadow: [
-                                BoxShadow(
-                                  color: Colors.white,
-                                  spreadRadius: -6.0,
-                                  blurRadius: 20.0,
-                                )
-                              ]),
-                              child: Stack(
-                                alignment: const Alignment(0, 0.65),
-                                children: [
-                                  Image.asset(
-                                    "assets/images/home/beleg.png",
-                                    width: width * 0.19,
-                                    height: width * 0.19,
-                                  ),
-                                  const Text(
-                                    "Бэлэг",
-                                    style: TextStyle(
-                                        fontFamily: "ComicSansMS",
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 12),
-                                  ),
-                                ],
-                              ),
-                              // Image.asset(
-                              //   "assets/images/home/beleg.png",
-                              //   width: width * 0.19,
-                              //   height: width * 0.19,
-                              // ),
-                            ),
+
+                            // Get.to(() => Container(
+                            //       width: width,
+                            //       height: height,
+                            //       child: LottieBuilder.asset(
+                            //         frameRate: const FrameRate(10),
+                            //         fit: BoxFit.fill,
+                            //         "assets/animations/start.json",
+                            //         controller: _animationController,
+                            //         onLoaded: (composition) {
+                            //           _animationController.duration =
+                            //               composition.duration;
+                            //           _animationController.forward();
+                            //         },
+                            //         repeat: true,
+                            //       ),
+                            //     )),
+                            child: MyButton(
+                                paths: "assets/images/home/togloh.png",
+                                text: "Тоглох",
+                                width: width,
+                                height: height),
                           ),
                         ],
                       ),
                     ),
-                  ),
-                  Container(
-                    width: width,
-                    height: height * 0.24,
-                    child: Stack(
-                      alignment: Alignment.bottomCenter,
-                      children: [
-                        GestureDetector(
-                          onTap: () => Get.to(
-                            () => const LottieFile(),
-                            transition: Transition.fadeIn,
-                            duration: const Duration(milliseconds: 500),
-                          ),
-
-                          // Get.to(() => Container(
-                          //       width: width,
-                          //       height: height,
-                          //       child: LottieBuilder.asset(
-                          //         frameRate: const FrameRate(10),
-                          //         fit: BoxFit.fill,
-                          //         "assets/animations/start.json",
-                          //         controller: _animationController,
-                          //         onLoaded: (composition) {
-                          //           _animationController.duration =
-                          //               composition.duration;
-                          //           _animationController.forward();
-                          //         },
-                          //         repeat: true,
-                          //       ),
-                          //     )),
-                          child: MyButton(
-                              paths: "assets/images/home/togloh.png",
-                              text: "Тоглох",
-                              width: width,
-                              height: height),
-                        ),
-                        Positioned(
-                          right: width * 0.15,
-                          bottom: height * 0.05,
-                          child: Container(
-                            width: width * 0.13,
-                            height: height * 0.06,
-                            decoration: const BoxDecoration(
-                                image: DecorationImage(
-                              image: AssetImage("assets/images/home/too.png"),
-                            )),
-                            child: const Align(
-                              widthFactor: 10,
-                              heightFactor: 10,
-                              alignment: Alignment(0, -0.8),
-                              child: Text(
-                                "9",
-                                style: TextStyle(
-                                    fontFamily: "ComicSansMS",
-                                    color: Colors.white,
-                                    fontSize: 32),
-                              ),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            // Positioned(
-            //   top: height * 0.159,
-            //   left: -width * 0.028,
-            //   child:,
-            // )
-          ],
+              // Positioned(
+              //   top: height * 0.159,
+              //   left: -width * 0.028,
+              //   child:,
+              // )
+            ],
+          ),
         ),
       ),
     );
