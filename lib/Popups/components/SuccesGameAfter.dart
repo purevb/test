@@ -52,11 +52,12 @@ class Amjilttai extends StatelessWidget {
                   child: Stack(
                     children: [
                       Align(
-                        alignment: const Alignment(1.18, -1.28),
+                        alignment: const Alignment(1.18, -1.25),
                         child: GestureDetector(
-                          onTap: () => Get.back(),
+                          onTap: () => print("sda"),
+                          // Get.back(),
                           child: Transform.rotate(
-                            angle: 0.1,
+                            angle: 0.15,
                             child: Image.asset(
                               "assets/images/brand/x.png",
                               width: width * 0.15,
@@ -103,8 +104,8 @@ class Amjilttai extends StatelessWidget {
                                   child: Image.network(
                                     fit: BoxFit.fill,
                                     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjtJ1hzjN-R1FI9BfWxQ56vhVT8Bn9dXUzYQMKPsG7ay1A3VTP",
-                                  // path
-                                  )                                  ,
+                                    // path
+                                  ),
                                 ),
                                 const Padding(
                                   padding: EdgeInsets.all(8.0),
@@ -130,8 +131,7 @@ class Amjilttai extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 GestureDetector(
-                                  onTap: 
-                                  ()=>print("back"),
+                                  onTap: () => print("back"),
                                   child: SizedBox(
                                     width: width * 0.14,
                                     height: width * 0.14,
@@ -140,7 +140,7 @@ class Amjilttai extends StatelessWidget {
                                   ),
                                 ),
                                 GestureDetector(
-                                  onTap: ()=>print("repeat"),
+                                  onTap: () => print("repeat"),
                                   child: SizedBox(
                                     width: width * 0.18,
                                     height: width * 0.18,
@@ -149,7 +149,7 @@ class Amjilttai extends StatelessWidget {
                                   ),
                                 ),
                                 GestureDetector(
-                                  onTap: ()=> print("beleg"),
+                                  onTap: () => print("beleg"),
                                   child: SizedBox(
                                     width: width * 0.14,
                                     height: width * 0.14,

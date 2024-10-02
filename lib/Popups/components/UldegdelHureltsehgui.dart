@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 class Uldegdelhureltsehgui extends StatelessWidget {
@@ -6,12 +8,13 @@ class Uldegdelhureltsehgui extends StatelessWidget {
   final double height;
   // final String path;
   // final String text;
-  const Uldegdelhureltsehgui(
-      {required this.width,
-      // required this.path,
-      // required this.text,
-      required this.height,
-      super.key});
+  const Uldegdelhureltsehgui({
+    required this.width,
+    // required this.path,
+    // required this.text,
+    required this.height,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +26,7 @@ class Uldegdelhureltsehgui extends StatelessWidget {
           color: Colors.transparent,
           child: Stack(
             alignment: Alignment.bottomCenter,
+            clipBehavior: Clip.none,
             children: [
               Container(
                 padding: const EdgeInsets.only(bottom: 8),
@@ -38,7 +42,6 @@ class Uldegdelhureltsehgui extends StatelessWidget {
                   ],
                 ),
                 child: Container(
-                  padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(36),
                     boxShadow: const [
@@ -51,16 +54,30 @@ class Uldegdelhureltsehgui extends StatelessWidget {
                     ],
                   ),
                   child: Stack(
+                    clipBehavior: Clip.none,
                     children: [
-                      Align(
-                        alignment: const Alignment(1.18, -1.28),
+                      Positioned(
+                        top: -height * 0.025,
+                        right: -width * 0.02,
                         child: GestureDetector(
-                          onTap: () => Get.back(),
-                          child: Transform.rotate(
-                            angle: 0.1,
-                            child: Image.asset(
-                              "assets/images/brand/x.png",
-                              width: width * 0.15,
+                          onTap: () {
+                            print("s");
+                          },
+                          child: Material(
+                            color: const Color.fromARGB(0, 63, 46, 46),
+                            child: Transform.rotate(
+                              angle: 0.15,
+                              child: Container(
+                                width: width * 0.15,
+                                height: width * 0.15,
+                                color: Colors.transparent,
+                                child: Image.asset(
+                                  "assets/images/brand/x.png",
+                                  width: width * 0.15,
+                                  height: width * 0.15,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
                             ),
                           ),
                         ),
@@ -69,8 +86,11 @@ class Uldegdelhureltsehgui extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
-                            // width: width,
-                            padding: EdgeInsets.only(top: height * 0.07),
+                            margin: const EdgeInsets.all(15),
+                            width: width,
+                            padding: EdgeInsets.only(
+                              top: height * 0.07,
+                            ),
                             decoration: BoxDecoration(
                               boxShadow: [
                                 BoxShadow(
@@ -110,9 +130,8 @@ class Uldegdelhureltsehgui extends StatelessWidget {
                                 const Padding(
                                   padding: EdgeInsets.all(8.0),
                                   child: Text(
+                                    "Your content goes here...",
                                     textAlign: TextAlign.center,
-                                    "Your content goes heqerqwerqwesdfgsadfasdfasdfasdfasdfasddfgsdihvnijnisvnsivnj sdnvsjiodn fjidniohasfiodshdafioafninfifionsafbodnfgsdfg sdgsd gs gsdfg sdgsdfg darsg rqwer ",
-                                    //text
                                     style: TextStyle(
                                       fontFamily: "ComicSansMSS",
                                       fontSize: 17,
@@ -126,10 +145,9 @@ class Uldegdelhureltsehgui extends StatelessWidget {
                           ),
                           Container(
                             margin: EdgeInsets.only(bottom: height * 0.01),
-                            padding: const EdgeInsets.only(
-                                right: 20, left: 20, top: 10),
+                            padding: const EdgeInsets.only(right: 15, left: 15),
                             child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 GestureDetector(
                                   onTap: () => print("back"),
@@ -215,7 +233,7 @@ class Uldegdelhureltsehgui extends StatelessWidget {
                   child: const Align(
                     alignment: Alignment(0, -0.25),
                     child: Text(
-                      "Амжилттай",
+                      "Тоглох эрх",
                       style: TextStyle(
                         fontFamily: "ComicSansMSS",
                         fontSize: 36,

@@ -49,16 +49,21 @@ class MyPopUp extends StatelessWidget {
                     child: Stack(
                       children: [
                         Align(
-                          widthFactor: 0,
-                          heightFactor: 0,
-                          alignment: const Alignment(-10.7, 0.3),
-                          child: GestureDetector(
-                            onTap: () => Get.back(),
+                          alignment: const Alignment(1.15, -1.2),
+                          child: InkWell(
+                            onTap: () {
+                              print("object");
+                            },
+                            // =>
+                            //  Get.back(),
                             child: Transform.rotate(
-                              angle: 0.1,
-                              child: Image.asset(
-                                "assets/images/brand/x.png",
-                                width: width * 0.15,
+                              angle: 0.15,
+                              child: Container(
+                                // color: Colors.amber,
+                                child: Image.asset(
+                                  "assets/images/brand/x.png",
+                                  width: width * 0.13,
+                                ),
                               ),
                             ),
                           ),
@@ -125,8 +130,8 @@ class MyPopUp extends StatelessWidget {
                             Container(
                               height: height * 0.16,
                               margin: const EdgeInsets.only(top: 5),
-                              padding:
-                                  const EdgeInsets.only(top: 10, bottom: 10),
+                              padding: const EdgeInsets.only(
+                                  top: 10, bottom: 10, left: 10, right: 20),
                               width: width,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(26),
@@ -160,10 +165,81 @@ class MyPopUp extends StatelessWidget {
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                  SizedBox(
-                                    width: width * 0.64,
-                                    child: Image.asset(
-                                        "assets/images/home/iphone.png"),
+                                  // SizedBox(
+                                  //   width: width * 0.64,
+                                  //   child: Image.asset(
+                                  //       "assets/images/home/iphone.png"),
+                                  // ),
+                                  Container(
+                                    width: width,
+                                    height: height * 0.1,
+                                    child: Stack(
+                                      children: [
+                                        Align(
+                                            alignment:
+                                                const Alignment(-0.9, -0.6),
+                                            child: Image.asset(
+                                              "assets/images/colored/i.png",
+                                              width: width * 0.129,
+                                              // height: height * 0.08,
+                                            )),
+                                        Align(
+                                            alignment:
+                                                const Alignment(-0.6, -0.55),
+                                            child: Image.asset(
+                                              "assets/images/colored/p.png",
+                                              width: width * 0.118,
+                                              // height: height * 0.08,
+                                            )),
+                                        Align(
+                                            alignment:
+                                                const Alignment(-0.34, -0.5),
+                                            child: Image.asset(
+                                              "assets/images/colored/h.png",
+                                              width: width * 0.125,
+                                              // height: height * 0.08,
+                                            )),
+                                        Align(
+                                            alignment:
+                                                const Alignment(-0.05, -0.6),
+                                            child: Image.asset(
+                                              "assets/images/colored/o.png",
+                                              width: width * 0.12,
+                                              // height: height * 0.08,
+                                            )),
+                                        Align(
+                                            alignment:
+                                                const Alignment(0.2, -0.5),
+                                            child: Image.asset(
+                                              "assets/images/colored/n.png",
+                                              width: width * 0.115,
+                                              // height: height * 0.08,
+                                            )),
+                                        Align(
+                                            alignment:
+                                                const Alignment(0.465, -0.5),
+                                            child: Image.asset(
+                                              "assets/images/noColor/e.png",
+                                              width: width * 0.115,
+                                              // height: height * 0.08,
+                                            )),
+                                        Align(
+                                            alignment:
+                                                const Alignment(0.75, -0.2),
+                                            child: Image.asset(
+                                              "assets/images/colored/1.png",
+                                              width: width * 0.145,
+                                              // height: height * 0.08,
+                                            )),
+                                        Align(
+                                            alignment: const Alignment(1, -0.7),
+                                            child: Image.asset(
+                                              "assets/images/colored/6.png",
+                                              width: width * 0.114,
+                                              // height: height * 0.08,
+                                            )),
+                                      ],
+                                    ),
                                   ),
                                 ],
                               ),
