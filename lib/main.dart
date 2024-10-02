@@ -16,13 +16,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const GetMaterialApp(
-        debugShowCheckedModeBanner: false,
-        home:
-            // ErhAvahPage()
-            Superbeleg()
-        // LottieFile()
-        // LoadingScreen(),
-        // TransactionHistory(),
-        );
+      debugShowCheckedModeBanner: false,
+      home:
+          // ErhAvahPage()
+          // Superbeleg()
+          // LottieFile()
+          LoadingScreen(),
+      // TransactionHistory(),
+    );
   }
 }

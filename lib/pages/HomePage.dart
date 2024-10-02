@@ -391,11 +391,13 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
   Future<dynamic> bottomsheet(
       BuildContext context, double height, double width) {
-    return showMaterialModalBottomSheet(
+    return showModalBottomSheet(
+      isScrollControlled: true,
       backgroundColor: Colors.transparent,
-        context: context,
+      context: context,
       builder: (context) => IntrinsicHeight(
         child: Container(
+          height: height * 0.7,
           child: Stack(
             alignment: Alignment.bottomCenter,
             children: [
@@ -407,30 +409,33 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     color: Colors.transparent,
                   ),
                   Container(
-                      width: width,
-                      child: Column(
-                        children: [
-                          Container(
-                            height: height * 0.015,
-                            width: width,
-                            decoration: const BoxDecoration(
-                              gradient: LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
-                                colors: [
-                                  Color(0xff78A0CF),
-                                  Color(0xff2351A1),
-                                ],
-                              ),
+                    constraints: BoxConstraints(
+                        maxHeight: height * 0.6, minHeight: height * 0.55),
+                    width: width,
+                    child: Column(
+                      children: [
+                        Container(
+                          height: height * 0.015,
+                          width: width,
+                          decoration: const BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                Color(0xff78A0CF),
+                                Color(0xff2351A1),
+                              ],
                             ),
                           ),
-                          Container(
-                            height: height * 0.535,
+                        ),
+                        // Main content section
+                        Expanded(
+                          child: Container(
                             padding: EdgeInsets.only(
-                                top: height * 0.04,
-                                left: 20,
-                                right: 20,
-                                bottom: 20),
+                              top: height * 0.04,
+                              left: 20,
+                              right: 20,
+                            ),
                             width: width,
                             decoration: const BoxDecoration(
                               gradient: LinearGradient(
@@ -446,64 +451,65 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                               children: [
                                 Container(
                                   decoration: BoxDecoration(
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color: Colors.black.withOpacity(0.3),
-                                          spreadRadius: 0,
-                                          blurRadius: 5.0,
-                                        )
-                                      ],
-                                      color: const Color(0xfffff1de),
-                                      borderRadius: BorderRadius.circular(31)),
-                                  child: GridView.builder(
-                                      shrinkWrap: true,
-                                      physics:
-                                          const NeverScrollableScrollPhysics(),
-                                      padding: const EdgeInsets.only(
-                                          top: 25,
-                                          right: 20,
-                                          left: 20,
-                                          bottom: 30),
-                                      gridDelegate:
-                                          SliverGridDelegateWithFixedCrossAxisCount(
-                                        mainAxisSpacing: 10,
-                                        crossAxisSpacing: 30,
-                                        crossAxisCount: 3,
-                                        mainAxisExtent: height * 0.09,
-                                        // childAspectRatio:
-                                        //     2 / 5
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black.withOpacity(0.3),
+                                        spreadRadius: 0,
+                                        blurRadius: 5.0,
                                       ),
-                                      itemCount: 6,
-                                      itemBuilder:
-                                          (BuildContext context, int index) {
-                                        return GestureDetector(
-                                          onTap: () => print("1x"),
-                                          child: Xbutton(
-                                            multiple: 'x1',
-                                            price: '300₮',
-                                            width: width,
-                                            height: height,
-                                          ),
-                                        );
-                                      }),
+                                    ],
+                                    color: const Color(0xfffff1de),
+                                    borderRadius: BorderRadius.circular(31),
+                                  ),
+                                  child: GridView.builder(
+                                    shrinkWrap: true,
+                                    physics:
+                                        const NeverScrollableScrollPhysics(),
+                                    padding: const EdgeInsets.only(
+                                      top: 25,
+                                      right: 20,
+                                      left: 20,
+                                      bottom: 30,
+                                    ),
+                                    gridDelegate:
+                                        SliverGridDelegateWithFixedCrossAxisCount(
+                                      mainAxisSpacing: 10,
+                                      crossAxisSpacing: 20,
+                                      crossAxisCount: 3,
+                                      mainAxisExtent: height * 0.098,
+                                    ),
+                                    itemCount: 6,
+                                    itemBuilder:
+                                        (BuildContext context, int index) {
+                                      return GestureDetector(
+                                        onTap: () =>
+                                            print("Item $index clicked"),
+                                        child: Xbutton(
+                                          multiple: 'x1',
+                                          price: '300₮',
+                                          width: width,
+                                          height: height,
+                                        ),
+                                      );
+                                    },
+                                  ),
                                 ),
-                                const SizedBox(
-                                  height: 20,
-                                ),
+                                const SizedBox(height: 20),
+                                // Buttons and other controls
                                 Container(
-                                  // margin: const EdgeInsets.only(bottom: 20),
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 15, vertical: 20),
                                   decoration: BoxDecoration(
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color: Colors.black.withOpacity(0.3),
-                                          spreadRadius: 0,
-                                          blurRadius: 5.0,
-                                        )
-                                      ],
-                                      color: const Color(0xfffff1de),
-                                      borderRadius: BorderRadius.circular(31)),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black.withOpacity(0.3),
+                                        spreadRadius: 0,
+                                        blurRadius: 5.0,
+                                      ),
+                                    ],
+                                    color: const Color(0xfffff1de),
+                                    borderRadius: BorderRadius.circular(31),
+                                  ),
                                   child: Column(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
@@ -511,17 +517,22 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                       Container(
                                         padding: const EdgeInsets.symmetric(
                                             horizontal: 15),
+                                        margin:
+                                            const EdgeInsets.only(bottom: 8),
                                         child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
                                           children: [
                                             GestureDetector(
-                                              onTap: () => print("minus"),
+                                              onTap: () =>
+                                                  print("Minus pressed"),
                                               child: Container(
-                                                width: width * 0.12,
-                                                height: width * 0.12,
-                                                margin: const EdgeInsets.only(
-                                                    bottom: 20),
+                                                width: width * 0.1,
+                                                height: width * 0.1,
+                                                // margin: const EdgeInsets.only(
+                                                //     bottom: 20),
                                                 child: Image.asset(
                                                   "assets/images/home/bottomsheet/hasah.png",
                                                   fit: BoxFit.fill,
@@ -531,20 +542,20 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                             Container(
                                               width: width * 0.45,
                                               height: height * 0.07,
-                                              margin: const EdgeInsets.only(
-                                                  bottom: 20),
+                                              // margin: const EdgeInsets.only(
+                                              //     bottom: 20),
                                               child: Image.asset(
                                                 "assets/images/home/bottomsheet/multiple.png",
                                                 fit: BoxFit.fill,
                                               ),
                                             ),
                                             GestureDetector(
-                                              onTap: () => print("add"),
+                                              onTap: () => print("Add pressed"),
                                               child: Container(
-                                                width: width * 0.12,
-                                                height: width * 0.12,
-                                                margin: const EdgeInsets.only(
-                                                    bottom: 20),
+                                                width: width * 0.1,
+                                                height: width * 0.1,
+                                                // margin: const EdgeInsets.only(
+                                                //     bottom: 20),
                                                 child: Image.asset(
                                                   "assets/images/home/bottomsheet/nemh.png",
                                                   fit: BoxFit.fill,
@@ -554,12 +565,11 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                           ],
                                         ),
                                       ),
-                                      const Text(
-                                        maxLines: 2,
-                                        "s",
-                                        style: TextStyle(fontSize: 16),
-                                      ),
+                                      Text(
+                                          maxLines: 2,
+                                          "datadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadata"),
                                       Container(
+                                        margin: const EdgeInsets.only(top: 8),
                                         child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
@@ -577,60 +587,68 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                               ),
                                             ),
                                             GestureDetector(
-                                              onTap: () => print("buyb"),
+                                              onTap: () => print("Buy pressed"),
                                               child: Container(
                                                 width: width * 0.66,
                                                 height: height * 0.063,
                                                 decoration: const BoxDecoration(
-                                                    image: DecorationImage(
-                                                        fit: BoxFit.fill,
-                                                        image: AssetImage(
-                                                            "assets/images/home/bottomsheet/buy.png"))),
+                                                  image: DecorationImage(
+                                                    fit: BoxFit.fill,
+                                                    image: AssetImage(
+                                                      "assets/images/home/bottomsheet/buy.png",
+                                                    ),
+                                                  ),
+                                                ),
                                                 child: const Align(
                                                   alignment: Alignment(0, -0.2),
                                                   child: Text(
                                                     "Худалдаж авах",
                                                     style: TextStyle(
-                                                        fontFamily:
-                                                            "ComicSansMSS",
-                                                        color: Colors.white,
-                                                        fontSize: 25,
-                                                        shadows: [
-                                                          Shadow(
-                                                            color: Color(
-                                                                0xff4b509d),
-                                                            blurRadius: 2.0,
-                                                            offset: Offset(
-                                                                3.0, 3.0),
-                                                          ),
-                                                        ]),
+                                                      fontFamily:
+                                                          "ComicSansMSS",
+                                                      color: Colors.white,
+                                                      fontSize: 25,
+                                                      shadows: [
+                                                        Shadow(
+                                                          color:
+                                                              Color(0xff4b509d),
+                                                          blurRadius: 2.0,
+                                                          offset:
+                                                              Offset(3.0, 3.0),
+                                                        ),
+                                                      ],
+                                                    ),
                                                   ),
                                                 ),
                                               ),
                                             ),
                                           ],
                                         ),
-                                      )
+                                      ),
                                     ],
                                   ),
                                 ),
                               ],
                             ),
                           ),
-                        ],
-                      )),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
               Positioned(
                 top: height * 0.051,
                 child: Container(
-                  decoration: const BoxDecoration(boxShadow: [
-                    BoxShadow(
-                      color: Colors.white,
-                      spreadRadius: -6.0,
-                      blurRadius: 20.0,
-                    )
-                  ]),
+                  decoration: const BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.white,
+                        spreadRadius: -6.0,
+                        blurRadius: 20.0,
+                      ),
+                    ],
+                  ),
                   child: Stack(
                     alignment: const Alignment(0, 0.6),
                     children: [
@@ -642,9 +660,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       const Text(
                         "Дэлгүүр",
                         style: TextStyle(
-                            fontFamily: "ComicSansMSS",
-                            fontWeight: FontWeight.bold,
-                            fontSize: 12),
+                          fontFamily: "ComicSansMSS",
+                          fontWeight: FontWeight.bold,
+                          fontSize: 12,
+                        ),
                       ),
                     ],
                   ),

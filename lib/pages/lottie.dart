@@ -50,7 +50,7 @@ class _LottieFileState extends State<LottieFile> with TickerProviderStateMixin {
                   width: width,
                   height: height,
                   child: LottieBuilder.asset(
-                    frameRate: const FrameRate(100),
+                    frameRate: const FrameRate(80),
                     fit: BoxFit.fill,
                     "assets/animations/start.json",
                     controller: _animationController,
